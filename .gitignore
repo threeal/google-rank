@@ -1,4 +1,9 @@
 .*
+!.eslint*
 !.git*
 
+*.log
+tsconfig.eslint.json
+
+coverage/
 node_modules/

@@ -8,5 +8,21 @@
     "email": "alfi.maulana.f@gmail.com"
   },
   "license": "MIT",
-  "author": "Alfi Maulana <alfi.maulana.f@gmail.com> (https://github.com/threeal)"
+  "author": "Alfi Maulana <alfi.maulana.f@gmail.com> (https://github.com/threeal)",
+  "files": [
+    "lib"
+  ],
+  "bin": {
+    "google-rank": "lib/google-rank.js"
+  },
+  "scripts": {
+    "build": "dev build",
+    "clean": "dev clean",
+    "format": "dev format",
+    "lint": "dev lint",
+    "test": "dev test"
+  },
+  "devDependencies": {
+    "@actions-kit/dev": "^0.2.0"
+  }
 }
