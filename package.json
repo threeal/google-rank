@@ -1,0 +1,12 @@
+{
+  "name": "google-rank",
+  "version": "0.1.0",
+  "description": "Retrieve the Google search ranking of your website for specific keywords ",
+  "homepage": "https://github.com/threeal/google-rank",
+  "bugs": {
+    "url": "https://github.com/threeal/google-rank/issues",
+    "email": "alfi.maulana.f@gmail.com"
+  },
+  "license": "MIT",
+  "author": "Alfi Maulana <alfi.maulana.f@gmail.com> (https://github.com/threeal)"
+}
