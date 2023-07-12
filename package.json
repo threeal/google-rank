@@ -1,0 +1,45 @@
+{
+  "name": "google-rank",
+  "version": "0.1.0",
+  "description": "Retrieve the Google search ranking of your website for specific keywords ",
+  "keywords": [
+    "cli",
+    "google",
+    "tools",
+    "seo",
+    "seotools",
+    "google-search",
+    "search-ranking"
+  ],
+  "homepage": "https://github.com/threeal/google-rank",
+  "bugs": {
+    "url": "https://github.com/threeal/google-rank/issues",
+    "email": "alfi.maulana.f@gmail.com"
+  },
+  "license": "MIT",
+  "author": "Alfi Maulana <alfi.maulana.f@gmail.com> (https://github.com/threeal)",
+  "files": [
+    "lib"
+  ],
+  "bin": {
+    "google-rank": "lib/google-rank.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/threeal/google-rank.git"
+  },
+  "scripts": {
+    "build": "dev build",
+    "clean": "dev clean",
+    "format": "dev format",
+    "lint": "dev lint",
+    "test": "dev test"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "googlethis": "^1.7.1"
+  },
+  "devDependencies": {
+    "@actions-kit/dev": "^0.2.0"
+  }
+}
