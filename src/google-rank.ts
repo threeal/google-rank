@@ -10,9 +10,15 @@ async function run() {
   const website = program.args[0];
   const keywords = program.args.slice(1);
 
-  process.stdout.write(`Ranks for ${website} website:\n`);
+  const rankByKeywords: [string, Promise<number>][] = [];
   for (const keyword of keywords) {
-    const rank = await getWebsiteRank(website, keyword);
+    const prom = getWebsiteRank(website, keyword);
+    rankByKeywords.push([keyword, prom]);
+  }
+
+  process.stdout.write(`Ranks for ${website} website:\n`);
+  for (const [keyword, prom] of rankByKeywords) {
+    const rank = await prom;
     const rankStr = rank > 0 ? `${rank}` : "?";
     process.stdout.write(`${rankStr} ${keyword}\n`);
   }
