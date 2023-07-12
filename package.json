@@ -22,6 +22,9 @@
     "lint": "dev lint",
     "test": "dev test"
   },
+  "dependencies": {
+    "googlethis": "^1.7.1"
+  },
   "devDependencies": {
     "@actions-kit/dev": "^0.2.0"
   }
