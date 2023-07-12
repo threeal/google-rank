@@ -6,10 +6,41 @@ Google Rank is a tool that provides valuable insights into website visibility on
 
 ## Installation
 
-To install the `google-rank` tool globally, execute the following command:
+To install the `google-rank` tool globally, run the following command:
 
-```sh
-npm install --global google-rank
+```
+$ npm install --global google-rank
+```
+
+## Usage
+
+To retrieve the rank of a website for a specific keyword, run the `google-rank` tool followed by the website URL and the search keyword:
+
+```
+$ google-rank wikipedia.org krakatoa
+
+Ranks for wikipedia.org website:
+1 krakatoa
+```
+
+Multiple keywords can also be specified:
+
+```
+$ google-rank wikipedia.org krakatoa mit 'social media'
+
+Ranks for wikipedia.org website:
+1 krakatoa
+2 mit
+1 social media
+```
+
+If the website is not found for the specified keywords, it will output the rank as `?`:
+
+```
+$ google-rank wikipedia.org 'best city to travel'
+
+Ranks for wikipedia.org website:
+? best city to travel
 ```
 
 ## License
