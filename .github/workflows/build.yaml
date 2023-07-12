@@ -27,6 +27,9 @@ jobs:
       - name: Check lint
         run: npm run lint
 
+      - name: Clean Project
+        run: npm run clean
+
       - name: Build project
         run: npm run build
 
