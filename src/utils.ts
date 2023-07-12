@@ -16,3 +16,20 @@ export async function listWebsites(keyword: string): Promise<string[]> {
   }
   return websites;
 }
+
+/**
+ * Retrieves the rank of a website in Google search results for a specific keyword.
+ * @param website The website URL to check the rank for.
+ * @param keyword The keyword to search for.
+ * @returns A promise that resolves to the rank of the website (1-based index). Returns 0 if the website is not found in the search results.
+ */
+export async function getWebsiteRank(
+  website: string,
+  keyword: string
+): Promise<number> {
+  const websites = await listWebsites(keyword);
+  for (let i = 0; i < websites.length; ++i) {
+    if (websites[i].includes(website)) return i + 1;
+  }
+  return 0;
+}
