@@ -1,5 +1,7 @@
 # Google Rank
 
+[![build status](https://img.shields.io/github/actions/workflow/status/threeal/google-rank/build.yaml?branch=main)](https://github.com/threeal/google-rank/actions/workflows/build.yaml)
+
 Google Rank is a tool that provides valuable insights into website visibility on [Google](https://www.google.com/) search results. Track and monitor your website's ranking for specific keywords to optimize online presence and reach a wider audience.
 
 ## License
