@@ -23,6 +23,7 @@
     "test": "dev test"
   },
   "dependencies": {
+    "commander": "^11.0.0",
     "googlethis": "^1.7.1"
   },
   "devDependencies": {
