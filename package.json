@@ -2,6 +2,15 @@
   "name": "google-rank",
   "version": "0.1.0",
   "description": "Retrieve the Google search ranking of your website for specific keywords ",
+  "keywords": [
+    "cli",
+    "google",
+    "tools",
+    "seo",
+    "seotools",
+    "google-search",
+    "search-ranking"
+  ],
   "homepage": "https://github.com/threeal/google-rank",
   "bugs": {
     "url": "https://github.com/threeal/google-rank/issues",
@@ -14,6 +23,10 @@
   ],
   "bin": {
     "google-rank": "lib/google-rank.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/threeal/google-rank.git"
   },
   "scripts": {
     "build": "dev build",
