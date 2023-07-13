@@ -1,6 +1,8 @@
 # Google Rank
 
-[![build status](https://img.shields.io/github/actions/workflow/status/threeal/google-rank/build.yaml?branch=main)](https://github.com/threeal/google-rank/actions/workflows/build.yaml)
+[![npm version](https://img.shields.io/npm/v/google-rank?style=flat-square)](https://www.npmjs.com/package/google-rank)
+[![license](https://img.shields.io/github/license/threeal/google-rank?style=flat-square)](./LICENSE)
+[![build status](https://img.shields.io/github/actions/workflow/status/threeal/google-rank/build.yaml?branch=main&style=flat-square)](https://github.com/threeal/google-rank/actions/workflows/build.yaml)
 
 Google Rank is a tool designed to provide valuable insights into website visibility on [Google](https://www.google.com/) search results. By tracking and monitoring your website's ranking for specific keywords, you can optimize your online presence and effectively reach a wider audience.
 
