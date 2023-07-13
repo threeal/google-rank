@@ -1,6 +1,6 @@
 {
   "name": "google-rank",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Retrieve the Google search ranking of your website for specific keywords ",
   "keywords": [
     "cli",
@@ -29,7 +29,7 @@
     "url": "git+https://github.com/threeal/google-rank.git"
   },
   "scripts": {
-    "build": "dev build",
+    "build": "dev build && chmod-cli lib/google-rank.js -m 0o777",
     "clean": "dev clean",
     "format": "dev format",
     "lint": "dev lint",
@@ -40,6 +40,7 @@
     "googlethis": "^1.7.1"
   },
   "devDependencies": {
-    "@actions-kit/dev": "^0.2.0"
+    "@actions-kit/dev": "^0.2.0",
+    "chmod-cli": "^1.0.4"
   }
 }
