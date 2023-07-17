@@ -2,7 +2,7 @@
 
 import chalk from "chalk";
 import { program } from "commander";
-import { getWebsiteRank, WebsiteRank } from "./utils";
+import { googleGetWebsiteRank, GoogleWebsiteRank } from "./utils";
 
 async function run() {
   program
@@ -17,9 +17,9 @@ async function run() {
   const opts = program.opts();
   const maxPage = Number.parseInt(opts.maxPage);
 
-  const rankByKeywords: [string, Promise<WebsiteRank | undefined>][] = [];
+  const rankByKeywords: [string, Promise<GoogleWebsiteRank | undefined>][] = [];
   for (const keyword of keywords) {
-    const prom = getWebsiteRank(website, keyword, { maxPage });
+    const prom = googleGetWebsiteRank(website, keyword, { maxPage });
     rankByKeywords.push([keyword, prom]);
   }
 
