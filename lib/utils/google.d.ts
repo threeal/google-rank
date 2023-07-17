@@ -4,13 +4,13 @@
  * @param opts - Additional options.
  * @returns A promise that resolves to an array of website URLs.
  */
-export declare function listWebsites(keyword: string, opts?: {
+export declare function googleListWebsites(keyword: string, opts?: {
     page?: number;
 }): Promise<string[]>;
 /**
- * Represents the ranking of a website.
+ * Represents the ranking of a website in Google Search.
  */
-export interface WebsiteRank {
+export interface GoogleWebsiteRank {
     /** The search page ranking of the website. */
     page: number;
     /** The ranking of the website on the specified page. */
@@ -23,6 +23,6 @@ export interface WebsiteRank {
  * @param opts - Additional options.
  * @returns A promise that resolves to the rank of the website. Returns `undefined` if the website is not found in the search results.
  */
-export declare function getWebsiteRank(website: string, keyword: string, opts?: {
+export declare function googleGetWebsiteRank(website: string, keyword: string, opts?: {
     maxPage?: number;
-}): Promise<WebsiteRank | undefined>;
+}): Promise<GoogleWebsiteRank | undefined>;

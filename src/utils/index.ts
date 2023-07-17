@@ -1,1 +1,1 @@
-export { getWebsiteRank, WebsiteRank } from "./google";
+export { googleGetWebsiteRank, GoogleWebsiteRank } from "./google";
