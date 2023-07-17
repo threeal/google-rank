@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import chalk from "chalk";
 import { program } from "commander";
 import { getWebsiteRank, WebsiteRank } from "./utils";
 
@@ -22,13 +23,23 @@ async function run() {
     rankByKeywords.push([keyword, prom]);
   }
 
-  process.stdout.write(`Ranks for ${website} website:\n`);
+  process.stdout.write(`Ranks for ${chalk.blueBright(website)} website:\n`);
   for (const [keyword, prom] of rankByKeywords) {
     const rank = await prom;
     if (rank === undefined) {
       process.stdout.write(`page ?  rank ?`);
     } else {
-      process.stdout.write(`page ${rank.page + 1}  rank ${rank.rank + 1}`);
+      if (rank.page <= 0) {
+        process.stdout.write(`page ${chalk.greenBright(rank.page + 1)}`);
+      } else {
+        process.stdout.write(`page ${chalk.redBright(rank.page + 1)}`);
+      }
+
+      if (rank.page <= 0 && rank.rank <= 2) {
+        process.stdout.write(`  rank ${chalk.greenBright(rank.rank + 1)}`);
+      } else {
+        process.stdout.write(`  rank ${chalk.redBright(rank.rank + 1)}`);
+      }
     }
     process.stdout.write(`  ${keyword}\n`);
   }

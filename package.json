@@ -36,6 +36,7 @@
     "test": "dev test"
   },
   "dependencies": {
+    "chalk": "^4.1.2",
     "commander": "^11.0.0",
     "googlethis": "^1.7.1"
   },
