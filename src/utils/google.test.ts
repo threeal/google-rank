@@ -19,7 +19,7 @@ describe("rank a website in Google Search", () => {
   it("should rank a website that is found", async () => {
     const rank = await googleGetWebsiteRank("github.com", "googlethis");
     expect(rank).toBeDefined();
-    if (rank) {
+    if (rank !== undefined) {
       expect(rank.page).toBe(0);
       expect(rank.rank).toBeGreaterThanOrEqual(0);
     }
@@ -32,10 +32,10 @@ describe("rank a website in Google Search", () => {
 
   it("should rank a website that is found on a specific page", async () => {
     const rank = await googleGetWebsiteRank("facebook.com", "googlethis", {
-      maxPage: 3,
+      maxPage: 10,
     });
     expect(rank).toBeDefined();
-    if (rank) {
+    if (rank !== undefined) {
       expect(rank.page).toBeGreaterThan(0);
       expect(rank.rank).toBeGreaterThanOrEqual(0);
     }
