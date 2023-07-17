@@ -5,7 +5,8 @@ import { formatKeywordRank } from "./format";
 describe("Format the rank of a keyword as a string", () => {
   it("should format undefined rank correctly", () => {
     const str = formatKeywordRank("a keyword", undefined);
-    expect(str).toBe("page ?  rank ?  a keyword");
+    const mark = chalk.blackBright("?");
+    expect(str).toBe(`page ${mark}  rank ${mark}  a keyword`);
   });
 
   it("should format green rank correctly", () => {
