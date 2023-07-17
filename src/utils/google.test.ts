@@ -1,5 +1,5 @@
 import { describe, expect, it } from "@jest/globals";
-import { getWebsiteRank, listWebsites } from "./utils";
+import { getWebsiteRank, listWebsites } from "./google";
 
 describe("list websites", () => {
   it("should list websites", async () => {
