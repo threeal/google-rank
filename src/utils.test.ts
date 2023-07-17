@@ -18,18 +18,26 @@ describe("list websites", () => {
 describe("rank a website", () => {
   it("should rank a website that is found", async () => {
     const rank = await getWebsiteRank("github.com", "googlethis");
-    expect(rank).toBeGreaterThan(0);
+    expect(rank).not.toBeUndefined();
+    if (rank !== undefined) {
+      expect(rank.page).toBe(0);
+      expect(rank.rank).toBeGreaterThanOrEqual(0);
+    }
   });
 
   it("should not rank a website that is not found", async () => {
     const rank = await getWebsiteRank("randomsite.con", "googlethis");
-    expect(rank).toBe(0);
+    expect(rank).toBeUndefined();
   });
 
   it("should rank a website that is found on specific page", async () => {
     const rank = await getWebsiteRank("facebook.com", "googlethis", {
       maxPage: 3,
     });
-    expect(rank).toBeGreaterThan(0);
+    expect(rank).not.toBeUndefined();
+    if (rank !== undefined) {
+      expect(rank.page).toBeGreaterThan(0);
+      expect(rank.rank).toBeGreaterThanOrEqual(0);
+    }
   });
 });
