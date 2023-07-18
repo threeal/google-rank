@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 
+import chalk from "chalk";
 import { program } from "commander";
-import { googleGetWebsiteRank, GoogleWebsiteRank } from "./utils";
+import ora from "ora";
+import * as utils from "./utils";
+
+type RankPromise = Promise<utils.GoogleWebsiteRank | undefined>;
 
 async function run() {
   program
@@ -16,22 +20,22 @@ async function run() {
   const opts = program.opts();
   const maxPage = Number.parseInt(opts.maxPage);
 
-  const rankByKeywords: [string, Promise<GoogleWebsiteRank | undefined>][] = [];
+  const rankByKeywords: [string, RankPromise][] = [];
   for (const keyword of keywords) {
-    const prom = googleGetWebsiteRank(website, keyword, { maxPage });
+    const prom = utils.googleGetWebsiteRank(website, keyword, { maxPage });
     rankByKeywords.push([keyword, prom]);
   }
 
-  process.stdout.write(`Ranks for ${website} website:\n`);
+  process.stdout.write(`Ranks for ${chalk.blueBright(website)} website:\n`);
+
+  const loading = ora("Getting ranks...");
+  loading.start();
   for (const [keyword, prom] of rankByKeywords) {
-    const rank = await prom;
-    if (rank === undefined) {
-      process.stdout.write(`page ?  rank ?`);
-    } else {
-      process.stdout.write(`page ${rank.page + 1}  rank ${rank.rank + 1}`);
-    }
-    process.stdout.write(`  ${keyword}\n`);
+    loading.text = `Getting ranks of ${chalk.blueBright(keyword)} keyword...`;
+    const str = utils.formatKeywordRank(keyword, await prom);
+    process.stdout.write(`\r\x1b[K${str}\n`);
   }
+  loading.stop();
 }
 
 run();

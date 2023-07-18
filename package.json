@@ -36,8 +36,10 @@
     "test": "dev test"
   },
   "dependencies": {
+    "chalk": "^4.1.2",
     "commander": "^11.0.0",
-    "googlethis": "^1.7.1"
+    "googlethis": "^1.7.1",
+    "ora": "^5.4.1"
   },
   "devDependencies": {
     "@actions-kit/dev": "^0.2.0",
