@@ -6,20 +6,24 @@ describe("parse program arguments and options", () => {
   beforeAll(() => setupProgramArguments());
 
   it("should parse arguments correctly", () => {
-    program.parse(["node", "test", "github.com", "github", "googlethis"]);
+    const cmd = "node test github.com github googlethis";
+    program.parse(cmd.split(" "));
 
     const args = getProgramArguments();
     expect(args.website).toBe("github.com");
     expect(args.keywords).toStrictEqual(["github", "googlethis"]);
+    expect(args.file).toBeUndefined();
     expect(args.maxPage).toBe(3);
   });
 
   it("should parse arguments and options correctly", () => {
-    program.parse(["node", "test", "github.com", "github", "--max-page", "7"]);
+    const cmd = "node test github.com github --file keywords.txt --max-page 7";
+    program.parse(cmd.split(" "));
 
     const args = getProgramArguments();
     expect(args.website).toBe("github.com");
     expect(args.keywords).toStrictEqual(["github"]);
+    expect(args.file).toBe("keywords.txt");
     expect(args.maxPage).toBe(7);
   });
 });

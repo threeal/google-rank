@@ -7,6 +7,7 @@ export function setupProgramArguments(): void {
   program
     .argument("<website>", "website name")
     .arguments("<keywords...>")
+    .option("--file <string>", "read keywords from file instead")
     .option("--max-page <number>", "maximum page to search for", "3");
 }
 
@@ -19,6 +20,9 @@ export interface ProgramArguments {
 
   /** Keywords to search for. */
   keywords: string[];
+
+  /** File to read keywords from. */
+  file?: string;
 
   /** Maximum page to search for. */
   maxPage: number;
@@ -33,6 +37,7 @@ export function getProgramArguments(): ProgramArguments {
   return {
     website: program.args[0],
     keywords: program.args.slice(1),
+    file: opts.file,
     maxPage: parseInt(opts.maxPage, 10),
   };
 }
