@@ -11,7 +11,7 @@ async function run() {
   utils.setupProgramArguments();
   program.parse();
 
-  const args = utils.getProgramArguments();
+  const args = await utils.getProgramArguments();
 
   const rankByKeywords: [string, RankPromise][] = [];
   for (const keyword of args.keywords) {

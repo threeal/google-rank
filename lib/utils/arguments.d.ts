@@ -15,6 +15,6 @@ export interface ProgramArguments {
 }
 /**
  * Gets the arguments and options of the program.
- * @returns Arguments and options.
+ * @returns A promise that resolves to the arguments and options.
  */
-export declare function getProgramArguments(): ProgramArguments;
+export declare function getProgramArguments(): Promise<ProgramArguments>;
