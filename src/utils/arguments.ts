@@ -38,7 +38,8 @@ async function readKeywordsFromFile(filename: string): Promise<string[]> {
 
   const keywords: string[] = [];
   for await (const line of read) {
-    keywords.push(line.trim());
+    const trimmedLine = line.trim();
+    if (trimmedLine.length > 0) keywords.push(trimmedLine);
   }
   return keywords;
 }

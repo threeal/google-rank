@@ -6,7 +6,7 @@ import { getProgramArguments, setupProgramArguments } from "./arguments";
 jest.mock("fs", () => ({
   ...jest.requireActual<object>("fs"),
   createReadStream: () => {
-    return Readable.from(["googlethis\ngooglethat\n", "googlethis github"]);
+    return Readable.from(["googlethis\n\n\ngooglethat\n", "googlethis github"]);
   },
 }));
 
