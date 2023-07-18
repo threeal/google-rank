@@ -11,19 +11,19 @@ async function run() {
   utils.setupProgramArguments();
   program.parse();
 
-  const website = program.args[0];
-  const keywords = program.args.slice(1);
-
-  const opts = program.opts();
-  const maxPage = Number.parseInt(opts.maxPage);
+  const args = utils.getProgramArguments();
 
   const rankByKeywords: [string, RankPromise][] = [];
-  for (const keyword of keywords) {
-    const prom = utils.googleGetWebsiteRank(website, keyword, { maxPage });
+  for (const keyword of args.keywords) {
+    const prom = utils.googleGetWebsiteRank(args.website, keyword, {
+      maxPage: args.maxPage,
+    });
     rankByKeywords.push([keyword, prom]);
   }
 
-  process.stdout.write(`Ranks for ${chalk.blueBright(website)} website:\n`);
+  process.stdout.write(
+    `Ranks for ${chalk.blueBright(args.website)} website:\n`
+  );
 
   const loading = ora("Getting ranks...");
   loading.start();
