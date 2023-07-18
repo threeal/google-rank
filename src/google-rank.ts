@@ -8,11 +8,8 @@ import * as utils from "./utils";
 type RankPromise = Promise<utils.GoogleWebsiteRank | undefined>;
 
 async function run() {
-  program
-    .argument("<website>", "website name")
-    .arguments("<keywords...>")
-    .option("--max-page <number>", "maximum page to search for", "3")
-    .parse();
+  utils.setupProgramArguments();
+  program.parse();
 
   const website = program.args[0];
   const keywords = program.args.slice(1);
