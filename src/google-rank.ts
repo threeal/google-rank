@@ -2,9 +2,7 @@
 
 import chalk from "chalk";
 import { program } from "commander";
-import * as fs from "fs";
 import ora from "ora";
-import * as readline from "readline";
 import * as utils from "./utils";
 
 type RankPromise = Promise<utils.GoogleWebsiteRank | undefined>;
@@ -13,16 +11,7 @@ async function run() {
   utils.setupProgramArguments();
   program.parse();
 
-  const args = utils.getProgramArguments();
-
-  const keywords = args.keywords;
-  if (args.file !== undefined) {
-    const file = fs.createReadStream(args.file);
-    const read = readline.createInterface({ input: file });
-    for await (const line of read) {
-      keywords.push(line.trim());
-    }
-  }
+  const args = await utils.getProgramArguments();
 
   const rankByKeywords: [string, RankPromise][] = [];
   for (const keyword of args.keywords) {

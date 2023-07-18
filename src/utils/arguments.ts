@@ -1,4 +1,6 @@
 import { program } from "commander";
+import * as fs from "fs";
+import * as readline from "readline";
 
 /**
  * Sets up the arguments and options available in the program.
@@ -21,23 +23,41 @@ export interface ProgramArguments {
   /** Keywords to search for. */
   keywords: string[];
 
-  /** File to read keywords from. */
-  file?: string;
-
   /** Maximum page to search for. */
   maxPage: number;
 }
 
 /**
- * Gets the arguments and options of the program.
- * @returns Arguments and options.
+ * Reads keywords from the specified file.
+ * @param filename - The file to read keywords from.
+ * @returns A promise that resolves to a list of keywords.
  */
-export function getProgramArguments(): ProgramArguments {
+async function readKeywordsFromFile(filename: string): Promise<string[]> {
+  const file = fs.createReadStream(filename);
+  const read = readline.createInterface({ input: file });
+
+  const keywords: string[] = [];
+  for await (const line of read) {
+    keywords.push(line.trim());
+  }
+  return keywords;
+}
+
+/**
+ * Gets the arguments and options of the program.
+ * @returns A promise that resolves to the arguments and options.
+ */
+export async function getProgramArguments(): Promise<ProgramArguments> {
   const opts = program.opts();
+
+  let keywords = program.args.slice(1);
+  if (opts.file !== undefined) {
+    keywords = keywords.concat(await readKeywordsFromFile(opts.file));
+  }
+
   return {
     website: program.args[0],
-    keywords: program.args.slice(1),
-    file: opts.file,
     maxPage: parseInt(opts.maxPage, 10),
+    keywords,
   };
 }
