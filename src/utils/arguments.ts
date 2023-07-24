@@ -8,8 +8,8 @@ import * as readline from "readline";
 export function setupProgramArguments(): void {
   program
     .argument("<website>", "website name")
-    .arguments("<keywords...>")
-    .option("--file <string>", "read keywords from file instead")
+    .option("--keywords <string...>", "keywords to search for")
+    .option("--file <string>", "file to read keywords from")
     .option("--max-page <number>", "maximum page to search for", "3");
 }
 
@@ -51,7 +51,7 @@ async function readKeywordsFromFile(filename: string): Promise<string[]> {
 export async function getProgramArguments(): Promise<ProgramArguments> {
   const opts = program.opts();
 
-  let keywords = program.args.slice(1);
+  let keywords = opts.keywords;
   if (opts.file !== undefined) {
     keywords = keywords.concat(await readKeywordsFromFile(opts.file));
   }

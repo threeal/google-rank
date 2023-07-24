@@ -14,7 +14,7 @@ describe("parse program arguments and options", () => {
   beforeAll(() => setupProgramArguments());
 
   it("should parse arguments correctly", async () => {
-    const cmd = "node test github.com github googlethis";
+    const cmd = "node test github.com --keywords github googlethis";
     program.parse(cmd.split(" "));
 
     const args = await getProgramArguments();
@@ -24,7 +24,8 @@ describe("parse program arguments and options", () => {
   });
 
   it("should parse arguments and options correctly", async () => {
-    const cmd = "node test github.com github --file keywords.txt --max-page 7";
+    const cmd =
+      "node test github.com --keywords github --file keywords.txt --max-page 7";
     program.parse(cmd.split(" "));
 
     const args = await getProgramArguments();
