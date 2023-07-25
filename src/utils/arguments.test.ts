@@ -16,7 +16,7 @@ describe("parse program arguments and options", () => {
     const args = await parser.parse(cmd.split(" "));
     expect(args).toStrictEqual({
       website: "github.com",
-      keywords: [],
+      keywords: ["github.com"],
       maxPage: 3,
     });
   });

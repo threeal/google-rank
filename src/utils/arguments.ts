@@ -43,18 +43,26 @@ export class ArgumentsParser {
    */
   async parse(argv?: readonly string[]): Promise<Arguments> {
     this.#program.parse(argv);
-    const opts = this.#program.opts();
 
-    let keywords = opts.keywords ?? [];
+    const opts = this.#program.opts();
+    const args: Arguments = {
+      website: this.#program.args[0],
+      keywords: opts.keywords ?? [],
+      maxPage: parseInt(opts.maxPage, 10),
+    };
+
+    // Parse additional keywords from the given file, if specified.
     if (opts.file !== undefined) {
-      keywords = keywords.concat(await readKeywordsFromFile(opts.file));
+      const keywords = await readKeywordsFromFile(opts.file);
+      args.keywords = args.keywords.concat(keywords);
     }
 
-    return {
-      website: this.#program.args[0],
-      maxPage: parseInt(opts.maxPage, 10),
-      keywords,
-    };
+    // If no keywords are provided, use the website as the keyword.
+    if (args.keywords.length < 1) {
+      args.keywords = [args.website];
+    }
+
+    return args;
   }
 }
 
