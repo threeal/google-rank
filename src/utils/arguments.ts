@@ -45,7 +45,7 @@ export class ArgumentsParser {
     this.#program.parse(argv);
     const opts = this.#program.opts();
 
-    let keywords = opts.keywords;
+    let keywords = opts.keywords ?? [];
     if (opts.file !== undefined) {
       keywords = keywords.concat(await readKeywordsFromFile(opts.file));
     }
