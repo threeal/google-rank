@@ -1,11 +1,7 @@
 /**
- * Sets up the arguments and options available in the program.
- */
-export declare function setupProgramArguments(): void;
-/**
  * Represents the arguments and options of the program.
  */
-export interface ProgramArguments {
+export interface Arguments {
     /** Website name. */
     website: string;
     /** Keywords to search for. */
@@ -14,7 +10,18 @@ export interface ProgramArguments {
     maxPage: number;
 }
 /**
- * Gets the arguments and options of the program.
- * @returns A promise that resolves to the arguments and options.
+ * Represents the arguments and options parser of the program.
  */
-export declare function getProgramArguments(): Promise<ProgramArguments>;
+export declare class ArgumentsParser {
+    #private;
+    /**
+     * Constructs a new instance of the arguments and options parser of the program.
+     */
+    constructor();
+    /**
+     * Parses the arguments and options of the program.
+     * @param argv - An optional array of strings representing the command-line arguments.
+     * @returns A promise that resolves to the arguments and options.
+     */
+    parse(argv?: readonly string[]): Promise<Arguments>;
+}

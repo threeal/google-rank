@@ -1,17 +1,14 @@
 #!/usr/bin/env node
 
 import chalk from "chalk";
-import { program } from "commander";
 import ora from "ora";
 import * as utils from "./utils";
 
 type RankPromise = Promise<utils.GoogleWebsiteRank | undefined>;
 
 async function run() {
-  utils.setupProgramArguments();
-  program.parse();
-
-  const args = await utils.getProgramArguments();
+  const parser = new utils.ArgumentsParser();
+  const args = await parser.parse();
 
   const rankByKeywords: [string, RankPromise][] = [];
   for (const keyword of args.keywords) {

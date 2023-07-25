@@ -21,7 +21,7 @@ $ npm install --global google-rank
 To retrieve the rank of a website for a specific keyword, run the `google-rank` tool followed by the website URL and the search keyword:
 
 ```
-$ google-rank wikipedia.org krakatoa
+$ google-rank wikipedia.org --keywords krakatoa
 
 Ranks for wikipedia.org website:
 page 1  rank 1  krakatoa
@@ -30,7 +30,7 @@ page 1  rank 1  krakatoa
 Multiple keywords can also be specified:
 
 ```
-$ google-rank wikipedia.org krakatoa facebook 'social media'
+$ google-rank wikipedia.org --keywords krakatoa facebook 'social media'
 
 Ranks for wikipedia.org website:
 page 1  rank 1  krakatoa
@@ -41,7 +41,7 @@ page 1  rank 1  social media
 If the website is not found for the specified keywords, it will output the rank as `?`:
 
 ```
-$ google-rank wikipedia.org 'best city to travel'
+$ google-rank wikipedia.org --keywords 'best city to travel'
 
 Ranks for wikipedia.org website:
 page ?  rank ?  best city to travel
