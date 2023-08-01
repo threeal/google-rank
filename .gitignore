@@ -4,7 +4,6 @@
 !.prettier*
 
 *.log
-tsconfig.eslint.json
 
 coverage/
 node_modules/

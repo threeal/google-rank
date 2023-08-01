@@ -29,7 +29,7 @@
     "build": "dev build && chmod-cli lib/google-rank.js -m 0o777",
     "clean": "dev clean",
     "format": "prettier --write .",
-    "lint": "dev lint",
+    "lint": "eslint src",
     "test": "dev test"
   },
   "dependencies": {
@@ -41,6 +41,7 @@
   "devDependencies": {
     "@actions-kit/dev": "^0.2.0",
     "chmod-cli": "^1.0.4",
+    "eslint": "^8.46.0",
     "prettier": "^3.0.0"
   }
 }
