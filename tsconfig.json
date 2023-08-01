@@ -7,8 +7,10 @@
     "outDir": "lib",
     "sourceMap": true,
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "lib": ["ES2022"],
-    "target": "ES2022"
+    "target": "ES2022",
+    "skipLibCheck": true
   },
   "include": ["src"],
   "exclude": ["**/*.test.ts"]
