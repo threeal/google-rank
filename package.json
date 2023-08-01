@@ -21,9 +21,7 @@
   "files": [
     "dist"
   ],
-  "bin": {
-    "google-rank": "dist/google-rank.js"
-  },
+  "bin": "dist/google-rank.js",
   "repository": "github:threeal/google-rank.git",
   "scripts": {
     "build": "tsc && chmod-cli dist/google-rank.js -m 0o777",
@@ -39,6 +37,8 @@
     "ora": "^5.4.1"
   },
   "devDependencies": {
+    "@jest/globals": "^29.6.2",
+    "@types/node": "^20.4.5",
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
     "chmod-cli": "^1.0.4",
@@ -48,5 +48,6 @@
     "rimraf": "^5.0.1",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
-  }
+  },
+  "packageManager": "yarn@3.6.1"
 }

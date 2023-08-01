@@ -1,9 +1,15 @@
 .*
 !.eslint*
 !.git*
+!.pnp.*
 !.prettier*
+!.yarn*
 
 *.log
+
+.yarn/*
+!.yarn/cache/
+!.yarn/releases/
 
 coverage/
 node_modules/
