@@ -19,7 +19,7 @@ async function run() {
   }
 
   process.stdout.write(
-    `Ranks for ${chalk.blueBright(args.website)} website:\n`
+    `Ranks for ${chalk.blueBright(args.website)} website:\n`,
   );
 
   const loading = ora("Getting ranks...");
