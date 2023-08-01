@@ -26,7 +26,7 @@
   },
   "repository": "github:threeal/google-rank.git",
   "scripts": {
-    "build": "dev build && chmod-cli lib/google-rank.js -m 0o777",
+    "build": "tsc && chmod-cli lib/google-rank.js -m 0o777",
     "clean": "dev clean",
     "format": "prettier --write .",
     "lint": "eslint src",
@@ -42,6 +42,7 @@
     "@actions-kit/dev": "^0.2.0",
     "chmod-cli": "^1.0.4",
     "eslint": "^8.46.0",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
   }
 }

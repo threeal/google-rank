@@ -1,7 +1,12 @@
 {
-  "extends": "@actions-kit/dev/tsconfig.json",
   "compilerOptions": {
-    "outDir": "lib"
+    "strict": true,
+    "module": "CommonJS",
+    "declaration": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "target": "ES2021"
   },
   "include": ["src"],
   "exclude": ["**/*.test.ts"]
