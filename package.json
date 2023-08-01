@@ -19,15 +19,15 @@
   "license": "MIT",
   "author": "Alfi Maulana <alfi.maulana.f@gmail.com> (https://github.com/threeal)",
   "files": [
-    "lib"
+    "dist"
   ],
   "bin": {
-    "google-rank": "lib/google-rank.js"
+    "google-rank": "dist/google-rank.js"
   },
   "repository": "github:threeal/google-rank.git",
   "scripts": {
-    "build": "tsc && chmod-cli lib/google-rank.js -m 0o777",
-    "clean": "rimraf lib",
+    "build": "tsc && chmod-cli dist/google-rank.js -m 0o777",
+    "clean": "rimraf dist",
     "format": "prettier --write .",
     "lint": "eslint src",
     "test": "jest"
