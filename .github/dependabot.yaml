@@ -6,3 +6,10 @@ updates:
       interval: daily
     commit-message:
       prefix: chore
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: chore
