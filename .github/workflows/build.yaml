@@ -2,7 +2,7 @@ name: build
 on:
   workflow_dispatch:
   pull_request:
-    branches: ['*', '!latest']
+    branches: ["*", "!latest"]
   push:
     branches: [latest, main]
 jobs:

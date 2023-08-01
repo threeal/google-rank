@@ -8,7 +8,7 @@ import google from "googlethis";
  */
 export async function googleListWebsites(
   keyword: string,
-  opts?: { page?: number }
+  opts?: { page?: number },
 ): Promise<string[]> {
   const res = await google.search(keyword, {
     page: opts?.page ?? 0,
@@ -45,7 +45,7 @@ export interface GoogleWebsiteRank {
 export async function googleGetWebsiteRank(
   website: string,
   keyword: string,
-  opts?: { maxPage?: number }
+  opts?: { maxPage?: number },
 ): Promise<GoogleWebsiteRank | undefined> {
   const maxPage = opts?.maxPage ?? 1;
   for (let page = 0; page < maxPage; ++page) {

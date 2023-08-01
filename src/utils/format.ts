@@ -23,7 +23,7 @@ function formatRank(rank?: GoogleWebsiteRank): string {
  */
 export function formatKeywordRank(
   keyword: string,
-  rank?: GoogleWebsiteRank
+  rank?: GoogleWebsiteRank,
 ): string {
   return `${formatPageRank(rank)}  ${formatRank(rank)}  ${keyword}`;
 }

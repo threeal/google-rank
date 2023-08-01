@@ -1,6 +1,7 @@
 .*
 !.eslint*
 !.git*
+!.prettier*
 
 *.log
 tsconfig.eslint.json

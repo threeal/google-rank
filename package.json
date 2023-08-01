@@ -28,7 +28,7 @@
   "scripts": {
     "build": "dev build && chmod-cli lib/google-rank.js -m 0o777",
     "clean": "dev clean",
-    "format": "dev format",
+    "format": "prettier --write .",
     "lint": "dev lint",
     "test": "dev test"
   },
@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "@actions-kit/dev": "^0.2.0",
-    "chmod-cli": "^1.0.4"
+    "chmod-cli": "^1.0.4",
+    "prettier": "^3.0.0"
   }
 }
