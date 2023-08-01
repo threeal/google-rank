@@ -39,12 +39,14 @@
     "ora": "^5.4.1"
   },
   "devDependencies": {
-    "@actions-kit/dev": "^0.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
     "chmod-cli": "^1.0.4",
     "eslint": "^8.46.0",
     "jest": "^29.6.2",
     "prettier": "^3.0.0",
     "rimraf": "^5.0.1",
+    "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
   }
 }
