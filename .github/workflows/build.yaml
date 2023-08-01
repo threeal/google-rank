@@ -37,7 +37,7 @@ jobs:
         run: npm test
 
       - name: Run Project
-        run: lib/google-rank.js --help
+        run: dist/google-rank.js --help
 
       - name: Check diff
         run: git diff --exit-code HEAD
