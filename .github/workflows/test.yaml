@@ -1,4 +1,4 @@
-name: build
+name: test
 on:
   workflow_dispatch:
   pull_request:
@@ -6,7 +6,7 @@ on:
   push:
     branches: [latest, main]
 jobs:
-  build:
+  project:
     runs-on: macos-latest
     steps:
       - name: Checkout
