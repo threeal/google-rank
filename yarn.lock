@@ -2813,9 +2813,10 @@ __metadata:
     rimraf: ^5.0.1
     sort-package-json: ^2.5.1
     ts-jest: ^29.1.1
+    ts-jest-resolver: ^2.0.1
     typescript: ^5.1.6
   bin:
-    google-rank: dist/google-rank.js
+    google-rank: dist/google-rank.mjs
   languageName: unknown
   linkType: soft
 
@@ -3466,7 +3467,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-resolve@npm:^29.6.2":
+"jest-resolve@npm:^29.5.0, jest-resolve@npm:^29.6.2":
   version: 29.6.2
   resolution: "jest-resolve@npm:29.6.2"
   dependencies:
@@ -5153,6 +5154,15 @@ __metadata:
   peerDependencies:
     typescript: ">=4.2.0"
   checksum: 78794fc7270d295b36c1ac613465b5dc7e7226907a533125b30f177efef9dd630d4e503b00be31b44335eb2ebf9e136ebe97353f8fc5d383885d5fead9d54c09
+  languageName: node
+  linkType: hard
+
+"ts-jest-resolver@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "ts-jest-resolver@npm:2.0.1"
+  dependencies:
+    jest-resolve: ^29.5.0
+  checksum: 0845b9ab6a7d5c7b872e7573550607e9da1a2281c4db7a9d900c52b518bf5237ca265d56356b2ebb6d5aad705613e55e406c0eb66cad60ab2a303d17e6b0844e
   languageName: node
   linkType: hard
 
