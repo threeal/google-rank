@@ -59,4 +59,4 @@ async function readKeywordsFromFile(filename) {
     }
     return keywords;
 }
-//# sourceMappingURL=arguments.js.map
+//# sourceMappingURL=arguments.mjs.map

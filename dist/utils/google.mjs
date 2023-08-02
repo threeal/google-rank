@@ -39,4 +39,4 @@ export async function googleGetWebsiteRank(website, keyword, opts) {
     }
     return undefined;
 }
-//# sourceMappingURL=google.js.map
+//# sourceMappingURL=google.mjs.map

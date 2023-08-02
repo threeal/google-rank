@@ -22,4 +22,4 @@ function formatRank(rank) {
 export function formatKeywordRank(keyword, rank) {
     return `${formatPageRank(rank)}  ${formatRank(rank)}  ${keyword}`;
 }
-//# sourceMappingURL=format.js.map
+//# sourceMappingURL=format.mjs.map

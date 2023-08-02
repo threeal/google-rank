@@ -20,7 +20,7 @@
   "license": "MIT",
   "author": "Alfi Maulana <alfi.maulana.f@gmail.com> (https://github.com/threeal)",
   "type": "module",
-  "bin": "dist/google-rank.js",
+  "bin": "dist/google-rank.mjs",
   "files": [
     "dist"
   ],
@@ -50,6 +50,7 @@
     "rimraf": "^5.0.1",
     "sort-package-json": "^2.5.1",
     "ts-jest": "^29.1.1",
+    "ts-jest-resolver": "^2.0.1",
     "typescript": "^5.1.6"
   },
   "packageManager": "yarn@3.6.1",

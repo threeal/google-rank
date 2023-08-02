@@ -2,7 +2,7 @@
 
 import chalk from "chalk";
 import ora from "ora";
-import * as utils from "./utils/index.js";
+import * as utils from "./utils/index.mjs";
 
 type RankPromise = Promise<utils.GoogleWebsiteRank | undefined>;
 

@@ -1,6 +1,6 @@
 import { describe, expect, it, jest } from "@jest/globals";
 import { Readable } from "stream";
-import { ArgumentsParser } from "./arguments";
+import { ArgumentsParser } from "./arguments.mjs";
 
 jest.mock("fs", () => ({
   ...jest.requireActual<object>("fs"),

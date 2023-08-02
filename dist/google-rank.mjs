@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import chalk from "chalk";
 import ora from "ora";
-import * as utils from "./utils/index.js";
+import * as utils from "./utils/index.mjs";
 async function run() {
     const parser = new utils.ArgumentsParser();
     const args = await parser.parse();
@@ -23,4 +23,4 @@ async function run() {
     loading.stop();
 }
 run();
-//# sourceMappingURL=google-rank.js.map
+//# sourceMappingURL=google-rank.mjs.map
