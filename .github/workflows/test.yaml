@@ -1,4 +1,4 @@
-name: build
+name: test
 on:
   workflow_dispatch:
   pull_request:
@@ -6,7 +6,7 @@ on:
   push:
     branches: [latest, main]
 jobs:
-  build:
+  package:
     runs-on: macos-latest
     steps:
       - name: Checkout
@@ -15,26 +15,17 @@ jobs:
       - name: Install deps
         run: yarn install
 
-      - name: Fix sorting
-        run: yarn sort
-
-      - name: Fix formatting
-        run: yarn format
-
-      - name: Check lint
-        run: yarn lint
-
-      - name: Clean Project
+      - name: Clean dist
         run: yarn clean
 
-      - name: Build project
+      - name: Build dist
         run: yarn build
-
-      - name: Test project
-        run: yarn test
-
-      - name: Run Project
-        run: yarn google-rank --help
 
       - name: Check diff
         run: git diff --exit-code HEAD
+
+      - name: Test lib
+        run: yarn test
+
+      - name: Run bin
+        run: yarn google-rank --help
