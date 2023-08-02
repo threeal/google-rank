@@ -34,9 +34,7 @@ jobs:
         run: yarn test
 
       - name: Run Project
-        run: node dist/google-rank.js --help
-        env:
-          NODE_OPTIONS: --require ${{ github.workspace }}/.pnp.cjs
+        run: yarn google-rank --help
 
       - name: Check diff
         run: git diff --exit-code HEAD
