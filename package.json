@@ -82,14 +82,6 @@
         "dependsOn": [
           "format"
         ]
-      },
-      "test": {
-        "inputs": [
-          "default"
-        ],
-        "dependsOn": [
-          "build"
-        ]
       }
     }
   }
