@@ -15,7 +15,10 @@ jobs:
       - name: Install deps
         run: yarn install
 
-      - name: Check format
+      - name: Fix sorting
+        run: yarn sort
+
+      - name: Fix formatting
         run: yarn format
 
       - name: Check lint
