@@ -6,7 +6,7 @@ on:
   push:
     branches: [latest, main]
 jobs:
-  project:
+  package:
     runs-on: macos-latest
     steps:
       - name: Checkout
@@ -15,17 +15,17 @@ jobs:
       - name: Install deps
         run: yarn install
 
-      - name: Clean Project
+      - name: Clean dist
         run: yarn clean
 
-      - name: Build project
+      - name: Build dist
         run: yarn build
-
-      - name: Test project
-        run: yarn test
-
-      - name: Run Project
-        run: yarn google-rank --help
 
       - name: Check diff
         run: git diff --exit-code HEAD
+
+      - name: Test lib
+        run: yarn test
+
+      - name: Run bin
+        run: yarn google-rank --help
