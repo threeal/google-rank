@@ -19,6 +19,7 @@
   "repository": "github:threeal/google-rank.git",
   "license": "MIT",
   "author": "Alfi Maulana <alfi.maulana.f@gmail.com> (https://github.com/threeal)",
+  "type": "module",
   "bin": "dist/google-rank.js",
   "files": [
     "dist"

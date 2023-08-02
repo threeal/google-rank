@@ -1,4 +1,4 @@
-import { GoogleWebsiteRank } from "./google";
+import { GoogleWebsiteRank } from "./google.js";
 /**
  * Formats the rank of a keyword as a string.
  * @param keyword - The keyword string.
