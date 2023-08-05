@@ -20,6 +20,8 @@
   "license": "MIT",
   "author": "Alfi Maulana <alfi.maulana.f@gmail.com> (https://github.com/threeal)",
   "type": "module",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
   "bin": "dist/google-rank.mjs",
   "files": [
     "dist"
