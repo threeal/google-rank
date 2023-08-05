@@ -1,13 +1,4 @@
 /**
- * Retrieves a list of websites from Google search results based on the provided keyword.
- * @param keyword - The keyword to search for.
- * @param opts - Additional options.
- * @returns A promise that resolves to an array of website URLs.
- */
-export declare function listWebsites(keyword: string, opts?: {
-    page?: number;
-}): Promise<string[]>;
-/**
  * Represents the ranking of a website in Google Search.
  */
 export interface WebsiteRank {

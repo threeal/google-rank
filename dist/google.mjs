@@ -5,7 +5,7 @@ import google from "googlethis";
  * @param opts - Additional options.
  * @returns A promise that resolves to an array of website URLs.
  */
-export async function listWebsites(keyword, opts) {
+async function listWebsites(keyword, opts) {
     const res = await google.search(keyword, {
         page: opts?.page ?? 0,
         parse_ads: false,

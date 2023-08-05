@@ -6,7 +6,7 @@ import google from "googlethis";
  * @param opts - Additional options.
  * @returns A promise that resolves to an array of website URLs.
  */
-export async function listWebsites(
+async function listWebsites(
   keyword: string,
   opts?: { page?: number },
 ): Promise<string[]> {
