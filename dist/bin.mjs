@@ -2,13 +2,13 @@
 import chalk from "chalk";
 import ora from "ora";
 import { ArgumentsParser, formatKeywordRank } from "./internal/index.mjs";
-import { googleGetWebsiteRank } from "./google.mjs";
+import { getWebsiteRank } from "./google.mjs";
 async function run() {
     const parser = new ArgumentsParser();
     const args = await parser.parse();
     const rankByKeywords = [];
     for (const keyword of args.keywords) {
-        const prom = googleGetWebsiteRank(args.website, keyword, {
+        const prom = getWebsiteRank(args.website, keyword, {
             maxPage: args.maxPage,
         });
         rankByKeywords.push([keyword, prom]);

@@ -5,7 +5,7 @@ import google from "googlethis";
  * @param opts - Additional options.
  * @returns A promise that resolves to an array of website URLs.
  */
-export async function googleListWebsites(keyword, opts) {
+export async function listWebsites(keyword, opts) {
     const res = await google.search(keyword, {
         page: opts?.page ?? 0,
         parse_ads: false,
@@ -27,10 +27,10 @@ export async function googleListWebsites(keyword, opts) {
  * @param opts - Additional options.
  * @returns A promise that resolves to the rank of the website. Returns `undefined` if the website is not found in the search results.
  */
-export async function googleGetWebsiteRank(website, keyword, opts) {
+export async function getWebsiteRank(website, keyword, opts) {
     const maxPage = opts?.maxPage ?? 1;
     for (let page = 0; page < maxPage; ++page) {
-        const websites = await googleListWebsites(keyword, { page });
+        const websites = await listWebsites(keyword, { page });
         for (let rank = 0; rank < websites.length; ++rank) {
             if (websites[rank].includes(website)) {
                 return { page, rank };

@@ -1,15 +1,15 @@
 import { describe, expect, it } from "@jest/globals";
-import { googleGetWebsiteRank, googleListWebsites } from "./google.mjs";
+import { getWebsiteRank, listWebsites } from "./google.mjs";
 
 describe("list websites in Google Search", () => {
   it("should list websites", async () => {
-    const websites = await googleListWebsites("googlethis");
+    const websites = await listWebsites("googlethis");
     expect(websites.length).toBeGreaterThan(0);
     expect(websites[0]).toBe("www.npmjs.com");
   });
 
   it("should list websites on a specific page", async () => {
-    const websites = await googleListWebsites("googlethis", { page: 1 });
+    const websites = await listWebsites("googlethis", { page: 1 });
     expect(websites.length).toBeGreaterThan(0);
     expect(websites).not.toContain("www.npmjs.com");
   });
@@ -17,7 +17,7 @@ describe("list websites in Google Search", () => {
 
 describe("rank a website in Google Search", () => {
   it("should rank a website that is found", async () => {
-    const rank = await googleGetWebsiteRank("github.com", "googlethis");
+    const rank = await getWebsiteRank("github.com", "googlethis");
     expect(rank).toBeDefined();
     if (rank !== undefined) {
       expect(rank.page).toBe(0);
@@ -26,12 +26,12 @@ describe("rank a website in Google Search", () => {
   });
 
   it("should not rank a website that is not found", async () => {
-    const rank = await googleGetWebsiteRank("randomsite.con", "googlethis");
+    const rank = await getWebsiteRank("randomsite.con", "googlethis");
     expect(rank).toBeUndefined();
   });
 
   it("should rank a website that is found on a specific page", async () => {
-    const rank = await googleGetWebsiteRank("facebook.com", "googlethis", {
+    const rank = await getWebsiteRank("facebook.com", "googlethis", {
       maxPage: 10,
     });
     expect(rank).toBeDefined();
