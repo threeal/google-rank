@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 import chalk from "chalk";
 import ora from "ora";
-import * as utils from "./utils/index.mjs";
+import { ArgumentsParser, formatKeywordRank } from "./internal/index.mjs";
+import { getWebsiteRank } from "./rank.mjs";
 async function run() {
-    const parser = new utils.ArgumentsParser();
+    const parser = new ArgumentsParser();
     const args = await parser.parse();
     const rankByKeywords = [];
     for (const keyword of args.keywords) {
-        const prom = utils.googleGetWebsiteRank(args.website, keyword, {
+        const prom = getWebsiteRank(args.website, keyword, {
             maxPage: args.maxPage,
         });
         rankByKeywords.push([keyword, prom]);
@@ -17,10 +18,10 @@ async function run() {
     loading.start();
     for (const [keyword, prom] of rankByKeywords) {
         loading.text = `Getting ranks of ${chalk.blueBright(keyword)} keyword...`;
-        const str = utils.formatKeywordRank(keyword, await prom);
+        const str = formatKeywordRank(keyword, await prom);
         process.stdout.write(`\r\x1b[K${str}\n`);
     }
     loading.stop();
 }
 run();
-//# sourceMappingURL=google-rank.mjs.map
+//# sourceMappingURL=bin.mjs.map

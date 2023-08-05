@@ -3,17 +3,11 @@ import google from "googlethis";
 /**
  * Retrieves a list of websites from Google search results based on the provided keyword.
  * @param keyword - The keyword to search for.
- * @param opts - Additional options.
+ * @param page - The page number to list the website.
  * @returns A promise that resolves to an array of website URLs.
  */
-export async function googleListWebsites(
-  keyword: string,
-  opts?: { page?: number },
-): Promise<string[]> {
-  const res = await google.search(keyword, {
-    page: opts?.page ?? 0,
-    parse_ads: false,
-  });
+async function listWebsites(keyword: string, page: number): Promise<string[]> {
+  const res = await google.search(keyword, { page, parse_ads: false });
   const websites: string[] = [];
   let prevWebsite = "";
   for (const result of res.results) {
@@ -27,7 +21,7 @@ export async function googleListWebsites(
 /**
  * Represents the ranking of a website in Google Search.
  */
-export interface GoogleWebsiteRank {
+export interface WebsiteRank {
   /** The search page ranking of the website. */
   page: number;
 
@@ -42,14 +36,14 @@ export interface GoogleWebsiteRank {
  * @param opts - Additional options.
  * @returns A promise that resolves to the rank of the website. Returns `undefined` if the website is not found in the search results.
  */
-export async function googleGetWebsiteRank(
+export async function getWebsiteRank(
   website: string,
   keyword: string,
   opts?: { maxPage?: number },
-): Promise<GoogleWebsiteRank | undefined> {
+): Promise<WebsiteRank | undefined> {
   const maxPage = opts?.maxPage ?? 1;
   for (let page = 0; page < maxPage; ++page) {
-    const websites = await googleListWebsites(keyword, { page });
+    const websites = await listWebsites(keyword, page);
     for (let rank = 0; rank < websites.length; ++rank) {
       if (websites[rank].includes(website)) {
         return { page, rank };
