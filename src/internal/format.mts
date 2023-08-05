@@ -1,5 +1,5 @@
 import chalk from "chalk";
-import { WebsiteRank } from "../google.mjs";
+import { WebsiteRank } from "../rank.mjs";
 
 function formatPageRank(rank?: WebsiteRank): string {
   if (rank === undefined) return `page ${chalk.blackBright("?")}`;

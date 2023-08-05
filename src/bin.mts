@@ -4,7 +4,7 @@ import chalk from "chalk";
 import ora from "ora";
 
 import { ArgumentsParser, formatKeywordRank } from "./internal/index.mjs";
-import { getWebsiteRank, WebsiteRank } from "./google.mjs";
+import { getWebsiteRank, WebsiteRank } from "./rank.mjs";
 
 type RankPromise = Promise<WebsiteRank | undefined>;
 

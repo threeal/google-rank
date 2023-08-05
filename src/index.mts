@@ -1,1 +1,1 @@
-export { getWebsiteRank, WebsiteRank } from "./google.mjs";
+export { getWebsiteRank, WebsiteRank } from "./rank.mjs";

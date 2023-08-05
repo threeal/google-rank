@@ -2,7 +2,7 @@
 import chalk from "chalk";
 import ora from "ora";
 import { ArgumentsParser, formatKeywordRank } from "./internal/index.mjs";
-import { getWebsiteRank } from "./google.mjs";
+import { getWebsiteRank } from "./rank.mjs";
 async function run() {
     const parser = new ArgumentsParser();
     const args = await parser.parse();
