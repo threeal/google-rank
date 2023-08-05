@@ -3,17 +3,11 @@ import google from "googlethis";
 /**
  * Retrieves a list of websites from Google search results based on the provided keyword.
  * @param keyword - The keyword to search for.
- * @param opts - Additional options.
+ * @param page - The page number to list the website.
  * @returns A promise that resolves to an array of website URLs.
  */
-async function listWebsites(
-  keyword: string,
-  opts?: { page?: number },
-): Promise<string[]> {
-  const res = await google.search(keyword, {
-    page: opts?.page ?? 0,
-    parse_ads: false,
-  });
+async function listWebsites(keyword: string, page: number): Promise<string[]> {
+  const res = await google.search(keyword, { page, parse_ads: false });
   const websites: string[] = [];
   let prevWebsite = "";
   for (const result of res.results) {
@@ -49,7 +43,7 @@ export async function getWebsiteRank(
 ): Promise<WebsiteRank | undefined> {
   const maxPage = opts?.maxPage ?? 1;
   for (let page = 0; page < maxPage; ++page) {
-    const websites = await listWebsites(keyword, { page });
+    const websites = await listWebsites(keyword, page);
     for (let rank = 0; rank < websites.length; ++rank) {
       if (websites[rank].includes(website)) {
         return { page, rank };
