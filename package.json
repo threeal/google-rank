@@ -22,7 +22,7 @@
   "type": "module",
   "main": "dist/index.mjs",
   "types": "dist/index.d.mts",
-  "bin": "dist/google-rank.mjs",
+  "bin": "dist/bin.mjs",
   "files": [
     "dist"
   ],

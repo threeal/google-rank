@@ -2816,7 +2816,7 @@ __metadata:
     ts-jest-resolver: ^2.0.1
     typescript: ^5.1.6
   bin:
-    google-rank: dist/google-rank.mjs
+    google-rank: dist/bin.mjs
   languageName: unknown
   linkType: soft
 

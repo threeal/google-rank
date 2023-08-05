@@ -23,4 +23,4 @@ async function run() {
     loading.stop();
 }
 run();
-//# sourceMappingURL=google-rank.mjs.map
+//# sourceMappingURL=bin.mjs.map
