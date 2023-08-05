@@ -3,8 +3,9 @@
 import chalk from "chalk";
 import ora from "ora";
 import * as utils from "./utils/index.mjs";
+import { googleGetWebsiteRank, GoogleWebsiteRank } from "./google.mjs";
 
-type RankPromise = Promise<utils.GoogleWebsiteRank | undefined>;
+type RankPromise = Promise<GoogleWebsiteRank | undefined>;
 
 async function run() {
   const parser = new utils.ArgumentsParser();
@@ -12,7 +13,7 @@ async function run() {
 
   const rankByKeywords: [string, RankPromise][] = [];
   for (const keyword of args.keywords) {
-    const prom = utils.googleGetWebsiteRank(args.website, keyword, {
+    const prom = googleGetWebsiteRank(args.website, keyword, {
       maxPage: args.maxPage,
     });
     rankByKeywords.push([keyword, prom]);

@@ -1,1 +1,1 @@
-export { googleGetWebsiteRank, googleListWebsites, GoogleWebsiteRank, } from "./utils/google.mjs";
+export { googleGetWebsiteRank, googleListWebsites, GoogleWebsiteRank, } from "./google.mjs";

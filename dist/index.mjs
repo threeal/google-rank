@@ -1,2 +1,2 @@
-export { googleGetWebsiteRank, googleListWebsites, } from "./utils/google.mjs";
+export { googleGetWebsiteRank, googleListWebsites, } from "./google.mjs";
 //# sourceMappingURL=index.mjs.map
