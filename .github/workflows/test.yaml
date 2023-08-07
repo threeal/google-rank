@@ -16,6 +16,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.3
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3.7.0
+        with:
+          node-version: latest
+
+      - name: Setup Yarn
+        run: |
+          corepack enable
+          corepack prepare yarn@stable --activate
+
+      - name: Cache deps
+        uses: actions/cache@v3.3.1
+        with:
+          path: .yarn
+          key: yarn-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+
       - name: Install deps
         run: yarn install
 
