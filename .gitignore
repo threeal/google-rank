@@ -6,8 +6,5 @@
 
 *.log
 
-.yarn/*
-!.yarn/cache/
-
 coverage/
 node_modules/
