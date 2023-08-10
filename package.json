@@ -56,37 +56,5 @@
     "typescript": "^5.1.6"
   },
   "packageManager": "yarn@3.6.1",
-  "nx": {
-    "namedInputs": {
-      "default": [
-        "{projectRoot}/**/*"
-      ]
-    },
-    "targets": {
-      "build": {
-        "inputs": [
-          "default"
-        ],
-        "dependsOn": [
-          "lint"
-        ]
-      },
-      "format": {
-        "inputs": [
-          "default"
-        ],
-        "dependsOn": [
-          "sort"
-        ]
-      },
-      "lint": {
-        "inputs": [
-          "default"
-        ],
-        "dependsOn": [
-          "format"
-        ]
-      }
-    }
-  }
+  "nx": {}
 }

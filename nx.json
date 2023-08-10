@@ -6,5 +6,22 @@
         "cacheableOperations": ["build", "format", "lint", "sort"]
       }
     }
+  },
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*"]
+  },
+  "targetDefaults": {
+    "build": {
+      "inputs": ["default"],
+      "dependsOn": ["lint"]
+    },
+    "format": {
+      "inputs": ["default"],
+      "dependsOn": ["sort"]
+    },
+    "lint": {
+      "inputs": ["default"],
+      "dependsOn": ["format"]
+    }
   }
 }
