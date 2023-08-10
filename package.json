@@ -27,12 +27,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "nx exec -- tsc",
-    "clean": "nx exec -- rimraf dist",
-    "format": "nx exec -- prettier --write .",
-    "lint": "nx exec -- eslint src",
-    "sort": "nx exec -- sort-package-json",
-    "test": "nx exec -- jest"
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "format": "prettier --write .",
+    "lint": "eslint src",
+    "sort": "sort-package-json",
+    "test": "jest"
   },
   "dependencies": {
     "chalk": "^4.1.2",
@@ -56,37 +56,5 @@
     "typescript": "^5.1.6"
   },
   "packageManager": "yarn@3.6.1",
-  "nx": {
-    "namedInputs": {
-      "default": [
-        "{projectRoot}/**/*"
-      ]
-    },
-    "targets": {
-      "build": {
-        "inputs": [
-          "default"
-        ],
-        "dependsOn": [
-          "lint"
-        ]
-      },
-      "format": {
-        "inputs": [
-          "default"
-        ],
-        "dependsOn": [
-          "sort"
-        ]
-      },
-      "lint": {
-        "inputs": [
-          "default"
-        ],
-        "dependsOn": [
-          "format"
-        ]
-      }
-    }
-  }
+  "nx": {}
 }

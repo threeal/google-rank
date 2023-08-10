@@ -6,5 +6,33 @@
         "cacheableOperations": ["build", "format", "lint", "sort"]
       }
     }
+  },
+  "namedInputs": {
+    "dependencies": ["{projectRoot}/.pnp.*", "{projectRoot}/package.json"]
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["lint"],
+      "inputs": [
+        "dependencies",
+        "{projectRoot}/src/**/*.mts",
+        "{projectRoot}/tsconfig.json"
+      ]
+    },
+    "format": {
+      "dependsOn": ["sort"],
+      "inputs": ["dependencies", "{projectRoot}/**/*", "{projectRoot}/**/.*"]
+    },
+    "lint": {
+      "dependsOn": ["format"],
+      "inputs": [
+        "dependencies",
+        "{projectRoot}/src/**/*",
+        "{projectRoot}/.eslintrc.json"
+      ]
+    },
+    "sort": {
+      "inputs": ["dependencies"]
+    }
   }
 }
