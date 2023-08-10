@@ -1,13 +1,13 @@
-import { describe, expect, it, jest } from "@jest/globals";
-import { Readable } from "stream";
-import { ArgumentsParser } from "./arguments.mjs";
+import { expect } from "expect";
+// import { Readable } from "stream";
+import { ArgumentsParser } from "../../dist/internal/arguments.mjs";
 
-jest.mock("fs", () => ({
-  ...jest.requireActual<object>("fs"),
-  createReadStream: () => {
-    return Readable.from(["googlethis\n\n\ngooglethat\n", "googlethis github"]);
-  },
-}));
+// jest.mock("fs", () => ({
+//   ...jest.requireActual<object>("fs"),
+//   createReadStream: () => {
+//     return Readable.from(["googlethis\n\n\ngooglethat\n", "googlethis github"]);
+//   },
+// }));
 
 describe("parse program arguments and options", () => {
   it("should parse nothing", async () => {

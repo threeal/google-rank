@@ -1,6 +1,6 @@
-import { describe, expect, it } from "@jest/globals";
+import { expect } from "expect";
 import chalk from "chalk";
-import { formatKeywordRank } from "./format.mjs";
+import { formatKeywordRank } from "../../dist/internal/format.mjs";
 
 describe("format the rank of a keyword as a string", () => {
   it("should format undefined rank correctly", () => {
