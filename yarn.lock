@@ -1409,6 +1409,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"esmock@npm:^2.3.6":
+  version: 2.3.6
+  resolution: "esmock@npm:2.3.6"
+  checksum: f46ba2a5dcda1fe2ff484d0c468e9ab61cfbd5b38a6f66bd7ba68e31b057bb04bf40c7a0e555bcd726de5fa663e17205cc560d47c0458624048277e9a75f0d83
+  languageName: node
+  linkType: hard
+
 "espree@npm:^9.6.0, espree@npm:^9.6.1":
   version: 9.6.1
   resolution: "espree@npm:9.6.1"
@@ -1853,6 +1860,7 @@ __metadata:
     chalk: ^4.1.2
     commander: ^11.0.0
     eslint: ^8.46.0
+    esmock: ^2.3.6
     expect: ^29.6.2
     googlethis: ^1.7.1
     mocha: ^10.2.0
