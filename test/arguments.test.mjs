@@ -1,5 +1,4 @@
 import esmock from "esmock";
-import { expect } from "expect";
 import path from "path";
 import { Readable } from "stream";
 import { createRequire } from "module";
@@ -10,9 +9,8 @@ describe("parse program arguments and options", () => {
   const mockImport = () =>
     esmock("../dist/internal/arguments.mjs", {
       [require.resolve("fs").replaceAll(path.sep, "/")]: {
-        createReadStream: () => {
-          return Readable.from(["googlethis\n\n\ngooglethat\n", "googlethis github"]);
-        },
+        createReadStream: () =>
+          Readable.from(["googlethis\n\n\ngooglethat\n", "googlethis github"]),
       },
     });
 
@@ -21,8 +19,9 @@ describe("parse program arguments and options", () => {
 
     const parser = new ArgumentsParser();
     const cmd = "node test github.com";
-    const args = await parser.parse(cmd.split(" "));
-    expect(args).toStrictEqual({
+
+    const prom = parser.parse(cmd.split(" "));
+    return prom.should.eventually.to.be.deep.equal({
       website: "github.com",
       keywords: ["github.com"],
       maxPage: 3,
@@ -34,8 +33,9 @@ describe("parse program arguments and options", () => {
 
     const parser = new ArgumentsParser();
     const cmd = "node test github.com --keywords github gihtub";
-    const args = await parser.parse(cmd.split(" "));
-    expect(args).toStrictEqual({
+
+    const prom = parser.parse(cmd.split(" "));
+    return prom.should.eventually.to.be.deep.equal({
       website: "github.com",
       keywords: ["github", "gihtub"],
       maxPage: 3,
@@ -47,8 +47,9 @@ describe("parse program arguments and options", () => {
 
     const parser = new ArgumentsParser();
     const cmd = "node test github.com --file keywords.txt";
-    const args = await parser.parse(cmd.split(" "));
-    expect(args).toStrictEqual({
+
+    const prom = parser.parse(cmd.split(" "));
+    return prom.should.eventually.to.be.deep.equal({
       website: "github.com",
       keywords: ["googlethis", "googlethat", "googlethis github"],
       maxPage: 3,
@@ -61,8 +62,9 @@ describe("parse program arguments and options", () => {
     const parser = new ArgumentsParser();
     const cmd =
       "node test github.com --keywords github gihtub --file keywords.txt --max-page 7";
-    const args = await parser.parse(cmd.split(" "));
-    expect(args).toStrictEqual({
+
+    const prom = parser.parse(cmd.split(" "));
+    return prom.should.eventually.to.be.deep.equal({
       website: "github.com",
       keywords: [
         "github",

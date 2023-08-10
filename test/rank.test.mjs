@@ -1,29 +1,28 @@
-import { expect } from "expect";
 import { getWebsiteRank } from "../dist/rank.mjs";
 
 describe("rank a website in Google Search", () => {
   it("should rank a website that is found", async () => {
-    const rank = await getWebsiteRank("github.com", "googlethis");
-    expect(rank).toBeDefined();
-    if (rank !== undefined) {
-      expect(rank.page).toBe(0);
-      expect(rank.rank).toBeGreaterThanOrEqual(0);
-    }
+    const prom = getWebsiteRank("github.com", "googlethis");
+    return prom.should.eventually.not.to.be.undefined.and.then(
+      ({ page, rank }) => {
+        page.should.be.equal(0);
+        rank.should.be.at.least(0);
+      },
+    );
   });
 
   it("should not rank a website that is not found", async () => {
-    const rank = await getWebsiteRank("randomsite.con", "googlethis");
-    expect(rank).toBeUndefined();
+    const prom = getWebsiteRank("randomsite.con", "googlethis");
+    return prom.should.eventually.to.be.undefined;
   });
 
   it("should rank a website that is found on a specific page", async () => {
-    const rank = await getWebsiteRank("facebook.com", "googlethis", {
-      maxPage: 10,
-    });
-    expect(rank).toBeDefined();
-    if (rank !== undefined) {
-      expect(rank.page).toBeGreaterThan(0);
-      expect(rank.rank).toBeGreaterThanOrEqual(0);
-    }
+    const prom = getWebsiteRank("facebook.com", "googlethis", { maxPage: 10 });
+    return prom.should.eventually.not.to.be.undefined.and.then(
+      ({ page, rank }) => {
+        page.should.be.above(0);
+        rank.should.be.at.least(0);
+      },
+    );
   });
 });
