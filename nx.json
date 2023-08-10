@@ -8,20 +8,31 @@
     }
   },
   "namedInputs": {
-    "default": ["{projectRoot}/**/*"]
+    "dependencies": ["{projectRoot}/.pnp.*", "{projectRoot}/package.json"]
   },
   "targetDefaults": {
     "build": {
-      "inputs": ["default"],
-      "dependsOn": ["lint"]
+      "dependsOn": ["lint"],
+      "inputs": [
+        "dependencies",
+        "{projectRoot}/src/**/*.mts",
+        "{projectRoot}/tsconfig.json"
+      ]
     },
     "format": {
-      "inputs": ["default"],
-      "dependsOn": ["sort"]
+      "dependsOn": ["sort"],
+      "inputs": ["dependencies", "{projectRoot}/**/*", "{projectRoot}/**/.*"]
     },
     "lint": {
-      "inputs": ["default"],
-      "dependsOn": ["format"]
+      "dependsOn": ["format"],
+      "inputs": [
+        "dependencies",
+        "{projectRoot}/src/**/*",
+        "{projectRoot}/.eslintrc.json"
+      ]
+    },
+    "sort": {
+      "inputs": ["dependencies"]
     }
   }
 }
