@@ -1,6 +1,6 @@
 import { expect } from "expect";
 // import { Readable } from "stream";
-import { ArgumentsParser } from "../../dist/internal/arguments.mjs";
+import { ArgumentsParser } from "../dist/internal/arguments.mjs";
 
 // jest.mock("fs", () => ({
 //   ...jest.requireActual<object>("fs"),
