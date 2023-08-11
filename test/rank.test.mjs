@@ -1,6 +1,8 @@
 import { getWebsiteRank } from "../dist/rank.mjs";
 
-describe("rank a website in Google Search", () => {
+describe("rank a website in Google Search", function () {
+  this.retries(3);
+
   it("should rank a website that is found", async () => {
     const prom = getWebsiteRank("github.com", "googlethis");
     return prom.should.eventually.not.to.be.undefined.and.then(
