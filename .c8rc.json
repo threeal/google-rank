@@ -1,0 +1,6 @@
+{
+  "exclude": [".pnp.*", "test"],
+  "reporter": ["html", "text"],
+  "check-coverage": true,
+  "100": true
+}
