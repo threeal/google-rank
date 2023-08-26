@@ -24,6 +24,9 @@ jobs:
       - name: Enable Corepack
         run: corepack enable
 
+      - name: Update Yarn
+        run: yarn set version stable
+
       - name: Cache deps
         uses: actions/cache@v3.3.1
         with:
