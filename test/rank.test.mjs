@@ -18,6 +18,7 @@ describe("rank a website in Google Search", function () {
               "https://id.wikipedia.org/wiki/Google",
             ],
             [
+              null,
               "https://twitter.com/Google",
               "https://accounts.google.com/",
               "https://www.youtube.com/user/google",
@@ -27,9 +28,9 @@ describe("rank a website in Google Search", function () {
               "https://blog.google/",
               "https://store.google.com/",
               "https://support.google.com/",
-              "https://www.facebook.com/Google/?locale=id_ID",
             ],
             [
+              "https://www.facebook.com/Google/?locale=id_ID",
               "https://www.facebook.com/Google/?locale=id_ID",
               "https://io.google/",
               "https://www.google.co.uk/",

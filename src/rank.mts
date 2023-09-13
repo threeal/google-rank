@@ -32,6 +32,7 @@ export async function getWebsiteRank(
     let prevWebsite = "";
     for (const result of res[page]) {
       if (result.type == ResultTypes.SearchResult) {
+        if (result.link == null) continue;
         const website = new URL(result.link).hostname;
         if (website !== prevWebsite) websites.push(website);
         prevWebsite = website;
