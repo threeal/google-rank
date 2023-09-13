@@ -1,22 +1,4 @@
-import google from "googlethis";
-/**
- * Retrieves a list of websites from Google search results based on the provided keyword.
- * @param keyword - The keyword to search for.
- * @param page - The page number to list the website.
- * @returns A promise that resolves to an array of website URLs.
- */
-async function listWebsites(keyword, page) {
-    const res = await google.search(keyword, { page, parse_ads: false });
-    const websites = [];
-    let prevWebsite = "";
-    for (const result of res.results) {
-        const website = new URL(result.url).hostname;
-        if (website !== prevWebsite)
-            websites.push(website);
-        prevWebsite = website;
-    }
-    return websites;
-}
+import { ResultTypes, searchWithPages } from "google-sr";
 /**
  * Retrieves the rank of a website in Google search results for a specific keyword.
  * @param website - The website URL to check the rank for.
@@ -26,8 +8,18 @@ async function listWebsites(keyword, page) {
  */
 export async function getWebsiteRank(website, keyword, opts) {
     const maxPage = opts?.maxPage ?? 1;
-    for (let page = 0; page < maxPage; ++page) {
-        const websites = await listWebsites(keyword, page);
+    const res = await searchWithPages({ query: keyword, pages: maxPage });
+    for (let page = 0; page < res.length; ++page) {
+        const websites = [];
+        let prevWebsite = "";
+        for (const result of res[page]) {
+            if (result.type == ResultTypes.SearchResult) {
+                const website = new URL(result.link).hostname;
+                if (website !== prevWebsite)
+                    websites.push(website);
+                prevWebsite = website;
+            }
+        }
         for (let rank = 0; rank < websites.length; ++rank) {
             if (websites[rank].includes(website)) {
                 return { page, rank };
