@@ -37,7 +37,7 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^11.0.0",
-    "googlethis": "^1.7.1",
+    "google-sr": "^3.2.1",
     "ora": "^7.0.1"
   },
   "devDependencies": {

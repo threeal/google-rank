@@ -1,4 +1,4 @@
-import google from "googlethis";
+import { search, ResultTypes } from "google-sr";
 
 /**
  * Retrieves a list of websites from Google search results based on the provided keyword.
@@ -7,11 +7,12 @@ import google from "googlethis";
  * @returns A promise that resolves to an array of website URLs.
  */
 async function listWebsites(keyword: string, page: number): Promise<string[]> {
-  const res = await google.search(keyword, { page, parse_ads: false });
+  const res = await search({ query: keyword, page: page });
   const websites: string[] = [];
   let prevWebsite = "";
-  for (const result of res.results) {
-    const website = new URL(result.url).hostname;
+  for (const result of res) {
+    if (result.type != ResultTypes.SearchResult) continue;
+    const website = new URL(result.link).hostname;
     if (website !== prevWebsite) websites.push(website);
     prevWebsite = website;
   }
