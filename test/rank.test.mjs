@@ -5,7 +5,7 @@ describe("rank a website in Google Search", function () {
   this.timeout(20000);
 
   it("should rank a website that is found", async () => {
-    const prom = getWebsiteRank("github.com", "googlethis");
+    const prom = getWebsiteRank("google.com", "google");
     return prom.should.eventually.not.to.be.undefined.and.then(
       ({ page, rank }) => {
         page.should.be.equal(0);
@@ -15,12 +15,12 @@ describe("rank a website in Google Search", function () {
   });
 
   it("should not rank a website that is not found", async () => {
-    const prom = getWebsiteRank("randomsite.con", "googlethis");
+    const prom = getWebsiteRank("randomsite.con", "google");
     return prom.should.eventually.to.be.undefined;
   });
 
   it("should rank a website that is found on a specific page", async () => {
-    const prom = getWebsiteRank("facebook.com", "googlethis", { maxPage: 10 });
+    const prom = getWebsiteRank("facebook.com", "google", { maxPage: 3 });
     return prom.should.eventually.not.to.be.undefined.and.then(
       ({ page, rank }) => {
         page.should.be.above(0);
