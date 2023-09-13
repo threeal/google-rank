@@ -48,7 +48,7 @@
     "chai": "^4.3.8",
     "chai-as-promised": "^7.1.1",
     "eslint": "^8.48.0",
-    "esmock": "^2.3.8",
+    "esmock": "2.3.8",
     "mocha": "^10.2.0",
     "nx": "^16.7.4",
     "prettier": "^3.0.2",
