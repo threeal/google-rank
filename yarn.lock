@@ -1398,7 +1398,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esmock@npm:^2.3.8":
+"esmock@npm:2.3.8":
   version: 2.3.8
   resolution: "esmock@npm:2.3.8"
   checksum: 3d2df5cabdcaaeeee683c42ca7d1ee670b3038ff83203434e6aa23058121c047c1d4335b197f21211c56552ce70fa1fd400a1a41d1d95189c792ac34b05fe9dc
@@ -1855,7 +1855,7 @@ __metadata:
     chalk: ^4.1.2
     commander: ^11.0.0
     eslint: ^8.48.0
-    esmock: ^2.3.8
+    esmock: 2.3.8
     google-sr: ^3.2.1
     mocha: ^10.2.0
     nx: ^16.7.4
