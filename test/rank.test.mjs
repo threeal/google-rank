@@ -1,9 +1,6 @@
 import esmock from "esmock";
 
 describe("rank a website in Google Search", function () {
-  this.retries(3);
-  this.timeout(20000);
-
   const mockImport = () =>
     esmock("../dist/rank.mjs", {
       ["google-sr"]: {
