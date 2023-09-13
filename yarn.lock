@@ -836,7 +836,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.2":
+"chalk@npm:^4.0.0, chalk@npm:^4.1.0":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -1852,7 +1852,7 @@ __metadata:
     c8: ^8.0.1
     chai: ^4.3.8
     chai-as-promised: ^7.1.1
-    chalk: ^4.1.2
+    chalk: ^5.3.0
     commander: ^11.0.0
     eslint: ^8.48.0
     esmock: 2.3.8
