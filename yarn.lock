@@ -1450,10 +1450,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esmock@npm:2.3.8":
-  version: 2.3.8
-  resolution: "esmock@npm:2.3.8"
-  checksum: 3d2df5cabdcaaeeee683c42ca7d1ee670b3038ff83203434e6aa23058121c047c1d4335b197f21211c56552ce70fa1fd400a1a41d1d95189c792ac34b05fe9dc
+"esmock@npm:2.5.1":
+  version: 2.5.1
+  resolution: "esmock@npm:2.5.1"
+  checksum: 245bffc281b3364f0f70c4ec2ad907391cb21f18290fb3931d5bb39118b06a768876cb7d500a669060fe22befe60263a436a3d8cb10453a26e3b21a7f35c1863
   languageName: node
   linkType: hard
 
@@ -1907,7 +1907,7 @@ __metadata:
     chalk: ^5.3.0
     commander: ^11.0.0
     eslint: ^8.48.0
-    esmock: 2.3.8
+    esmock: 2.5.1
     google-sr: ^3.2.1
     mocha: ^10.2.0
     nx: ^16.8.1
