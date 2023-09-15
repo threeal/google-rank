@@ -6,7 +6,7 @@ on:
   push:
     branches: [latest, main]
 env:
-  NODE_OPTIONS: --experimental-import-meta-resolve
+  NODE_OPTIONS: --experimental-vm-modules
 jobs:
   test:
     name: Test
