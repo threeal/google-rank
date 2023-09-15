@@ -2,7 +2,6 @@ import { expect, jest } from "@jest/globals";
 import { Readable } from "stream";
 
 jest.unstable_mockModule("fs", () => ({
-  __esModule: true,
   createReadStream: () =>
     Readable.from(["googlethis\n\n\ngooglethat\n", "googlethis github"]),
 }));
