@@ -1,8 +1,14 @@
 import { expect, jest } from "@jest/globals";
 
 jest.unstable_mockModule("google-sr", () => ({
-  ...jest.requireActual("google-sr"),
-  searchWithPages: async ({ query, pages }) => {
+  ...jest.requireActual<object>("google-sr"),
+  searchWithPages: async ({
+    query,
+    pages,
+  }: {
+    query: string;
+    pages: number;
+  }) => {
     if (query !== "google") return [];
     const websitesPages = [
       [
@@ -52,9 +58,12 @@ jest.unstable_mockModule("google-sr", () => ({
 describe("rank a website in Google Search", function () {
   it("should rank a website that is found", async () => {
     const { getWebsiteRank } = await import("../dist/rank.mjs");
-    const { page, rank } = await getWebsiteRank("google.com", "google");
-    expect(page).toBe(0);
-    expect(rank).toBeGreaterThanOrEqual(0);
+    const res = await getWebsiteRank("google.com", "google");
+    expect(res).not.toBeUndefined();
+    if (res !== undefined) {
+      expect(res.page).toBe(0);
+      expect(res.rank).toBeGreaterThanOrEqual(0);
+    }
   });
 
   it("should not rank a website that is not found", async () => {
@@ -65,10 +74,13 @@ describe("rank a website in Google Search", function () {
 
   it("should rank a website that is found on a specific page", async () => {
     const { getWebsiteRank } = await import("../dist/rank.mjs");
-    const { page, rank } = await getWebsiteRank("facebook.com", "google", {
+    const res = await getWebsiteRank("facebook.com", "google", {
       maxPage: 3,
     });
-    expect(page).toBeGreaterThan(0);
-    expect(rank).toBeGreaterThanOrEqual(0);
+    expect(res).not.toBeUndefined();
+    if (res !== undefined) {
+      expect(res.page).toBeGreaterThan(0);
+      expect(res.rank).toBeGreaterThanOrEqual(0);
+    }
   });
 });

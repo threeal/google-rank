@@ -8,5 +8,9 @@
       "statements": 100
     }
   },
-  "testMatch": ["**/*.test.mjs"]
+  "extensionsToTreatAsEsm": [".ts"],
+  "testMatch": ["**/*.test.ts"],
+  "transform": {
+    "^.+\\.ts$": ["ts-jest", { "useESM": true }]
+  }
 }
