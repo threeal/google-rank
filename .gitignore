@@ -1,5 +1,4 @@
 .*
-!.c8*
 !.eslint*
 !.git*
 !.prettier*
