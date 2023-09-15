@@ -8,9 +8,9 @@
       "statements": 100
     }
   },
-  "extensionsToTreatAsEsm": [".ts"],
+  "extensionsToTreatAsEsm": [".ts", ".mts"],
   "testMatch": ["**/*.test.ts"],
   "transform": {
-    "^.+\\.ts$": ["ts-jest", { "useESM": true }]
+    "^.+\\.m?ts$": ["ts-jest", { "useESM": true }]
   }
 }

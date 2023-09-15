@@ -9,7 +9,7 @@ jest.unstable_mockModule("fs", () => ({
 
 describe("parse program arguments and options", () => {
   it("should parse nothing", async () => {
-    const { ArgumentsParser } = await import("../dist/internal/arguments.mjs");
+    const { ArgumentsParser } = await import("../src/internal/arguments.mts");
     const parser = new ArgumentsParser();
     const cmd = "node test github.com";
 
@@ -22,7 +22,7 @@ describe("parse program arguments and options", () => {
   });
 
   it("should parse keywords correctly", async () => {
-    const { ArgumentsParser } = await import("../dist/internal/arguments.mjs");
+    const { ArgumentsParser } = await import("../src/internal/arguments.mts");
     const parser = new ArgumentsParser();
     const cmd = "node test github.com --keywords github gihtub";
 
@@ -35,7 +35,7 @@ describe("parse program arguments and options", () => {
   });
 
   it("should parse file correctly", async () => {
-    const { ArgumentsParser } = await import("../dist/internal/arguments.mjs");
+    const { ArgumentsParser } = await import("../src/internal/arguments.mts");
     const parser = new ArgumentsParser();
     const cmd = "node test github.com --file keywords.txt";
 
@@ -48,7 +48,7 @@ describe("parse program arguments and options", () => {
   });
 
   it("should parse arguments and options correctly", async () => {
-    const { ArgumentsParser } = await import("../dist/internal/arguments.mjs");
+    const { ArgumentsParser } = await import("../src/internal/arguments.mts");
     const parser = new ArgumentsParser();
     const cmd =
       "node test github.com --keywords github gihtub --file keywords.txt --max-page 7";

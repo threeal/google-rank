@@ -57,7 +57,7 @@ jest.unstable_mockModule("google-sr", () => ({
 
 describe("rank a website in Google Search", function () {
   it("should rank a website that is found", async () => {
-    const { getWebsiteRank } = await import("../dist/rank.mjs");
+    const { getWebsiteRank } = await import("../src/rank.mts");
     const res = await getWebsiteRank("google.com", "google");
     expect(res).not.toBeUndefined();
     if (res !== undefined) {
@@ -67,13 +67,13 @@ describe("rank a website in Google Search", function () {
   });
 
   it("should not rank a website that is not found", async () => {
-    const { getWebsiteRank } = await import("../dist/rank.mjs");
+    const { getWebsiteRank } = await import("../src/rank.mts");
     const prom = getWebsiteRank("randomsite.con", "google");
     return expect(prom).resolves.toBeUndefined();
   });
 
   it("should rank a website that is found on a specific page", async () => {
-    const { getWebsiteRank } = await import("../dist/rank.mjs");
+    const { getWebsiteRank } = await import("../src/rank.mts");
     const res = await getWebsiteRank("facebook.com", "google", {
       maxPage: 3,
     });
