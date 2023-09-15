@@ -8,9 +8,12 @@
       "statements": 100
     }
   },
-  "resolver": "ts-jest-resolver",
+  "extensionsToTreatAsEsm": [".ts", ".mts"],
+  "moduleNameMapper": {
+    "^(\\.{1,2}/.*)\\.mjs$": "$1.mts"
+  },
   "testMatch": ["**/*.test.ts"],
   "transform": {
-    "^.+\\.m?ts$": ["ts-jest"]
+    "^.+\\.m?ts$": ["ts-jest", { "useESM": true }]
   }
 }

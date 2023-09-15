@@ -35,7 +35,7 @@
       "inputs": ["dependencies"]
     },
     "test": {
-      "dependsOn": ["build"]
+      "dependsOn": ["lint"]
     }
   }
 }

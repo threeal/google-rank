@@ -1,4 +1,4 @@
-import { ResultTypes, searchWithPages } from "google-sr";
+import { searchWithPages } from "google-sr";
 /**
  * Retrieves the rank of a website in Google search results for a specific keyword.
  * @param website - The website URL to check the rank for.
@@ -12,15 +12,14 @@ export async function getWebsiteRank(website, keyword, opts) {
     for (let page = 0; page < res.length; ++page) {
         const websites = [];
         let prevWebsite = "";
-        for (const result of res[page]) {
-            if (result.type == ResultTypes.SearchResult) {
-                if (result.link == null)
-                    continue;
-                const website = new URL(result.link).hostname;
-                if (website !== prevWebsite)
-                    websites.push(website);
-                prevWebsite = website;
-            }
+        for (let result of res[page]) {
+            result = result;
+            if (result.link == null)
+                continue;
+            const website = new URL(result.link).hostname;
+            if (website !== prevWebsite)
+                websites.push(website);
+            prevWebsite = website;
         }
         for (let rank = 0; rank < websites.length; ++rank) {
             if (websites[rank].includes(website)) {
