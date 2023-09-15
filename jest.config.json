@@ -8,9 +8,5 @@
       "statements": 100
     }
   },
-  "resolver": "ts-jest-resolver",
-  "testMatch": ["**/*.test.ts"],
-  "transform": {
-    "^.+\\.m?ts$": ["ts-jest"]
-  }
+  "testMatch": ["**/*.test.mjs"]
 }
