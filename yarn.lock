@@ -1048,10 +1048,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.6.0":
+"@types/node@npm:*":
   version: 20.6.0
   resolution: "@types/node@npm:20.6.0"
   checksum: 52611801af5cf151c6fac1963aa4a8a8ca2e388a9e9ed82b01b70bca762088ded5b32cc789c5564220d5d7dccba2b8dd34446a3d4fc74736805e1f2cf262e29d
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^20.6.5":
+  version: 20.6.5
+  resolution: "@types/node@npm:20.6.5"
+  checksum: b849e849cf7631458a65c5019c81962028e306d8c4455a48422277b240f5a7eb8a1f1dafa60306bd4c773b77263bb8b05c074b1026e868bd137bb2022cf63ea2
   languageName: node
   linkType: hard
 
@@ -2914,7 +2921,7 @@ __metadata:
   dependencies:
     "@jest/globals": ^29.7.0
     "@types/jest": ^29.5.4
-    "@types/node": ^20.6.0
+    "@types/node": ^20.6.5
     "@typescript-eslint/eslint-plugin": ^6.7.2
     "@typescript-eslint/parser": ^6.7.0
     chalk: ^5.3.0
