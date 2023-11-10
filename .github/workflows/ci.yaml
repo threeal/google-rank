@@ -2,9 +2,8 @@ name: CI
 on:
   workflow_dispatch:
   pull_request:
-    branches: ["*", "!latest"]
   push:
-    branches: [latest, main]
+    branches: [main]
 env:
   NODE_OPTIONS: --experimental-vm-modules
 jobs:
