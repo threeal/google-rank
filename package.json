@@ -1,6 +1,6 @@
 {
   "name": "google-rank",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Retrieve the Google search ranking of your website for specific keywords ",
   "keywords": [
     "cli",
