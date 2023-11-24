@@ -6,4 +6,5 @@
 *.log
 
 coverage/
+dist/
 node_modules/
