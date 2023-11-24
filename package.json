@@ -28,7 +28,6 @@
   ],
   "scripts": {
     "build": "tsc",
-    "clean": "rimraf dist",
     "format": "prettier --write .",
     "lint": "eslint src",
     "prepack": "nx build",
