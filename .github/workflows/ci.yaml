@@ -38,9 +38,6 @@ jobs:
       - name: Install deps
         run: yarn install
 
-      - name: Clean dist
-        run: yarn clean
-
       - name: Build dist
         run: yarn nx build
 
