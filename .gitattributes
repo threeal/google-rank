@@ -1,4 +1,1 @@
-/.yarn/** linguist-vendored
-/.yarn/releases/* binary
-/.pnp.* binary linguist-generated
 yarn.lock -diff linguist-generated

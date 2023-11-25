@@ -3,8 +3,8 @@
 !.git*
 !.prettier*
 
-*.log
-
 coverage/
 dist/
 node_modules/
+
+package.tgz
