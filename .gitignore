@@ -3,8 +3,6 @@
 !.git*
 !.prettier*
 
-*.log
-
 coverage/
 dist/
 node_modules/
