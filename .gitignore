@@ -1,7 +1,6 @@
 .*
 !.eslint*
 !.git*
-!.prettier*
 
 coverage/
 dist/

@@ -1,6 +1,0 @@
-.yarn/
-dist/
-node_modules/
-
-.pnp.*
-package-lock.json
