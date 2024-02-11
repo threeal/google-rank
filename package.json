@@ -28,7 +28,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "format": "prettier --write .",
+    "format": "prettier --write --cache .",
     "lint": "eslint src",
     "prepack": "nx build",
     "sort": "sort-package-json",
