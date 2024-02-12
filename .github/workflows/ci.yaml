@@ -28,17 +28,17 @@ jobs:
 
       - name: Check format
         run: |
-          yarn format
+          corepack yarn format
           git diff --exit-code HEAD
 
       - name: Check lint
-        run: yarn lint
+        run: corepack yarn lint
 
       - name: Build dist
-        run: yarn pack
+        run: corepack yarn pack
 
       - name: Test lib
-        run: yarn test
+        run: corepack yarn test
 
       - name: Run bin
-        run: yarn google-rank --help
+        run: corepack yarn google-rank --help
