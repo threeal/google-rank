@@ -23,20 +23,8 @@ jobs:
         with:
           node-version: latest
 
-      - name: Enable Corepack
-        run: corepack enable
-
-      - name: Update Yarn
-        run: yarn set version stable
-
-      - name: Cache deps
-        uses: actions/cache@v4.0.0
-        with:
-          path: .yarn
-          key: yarn-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-
       - name: Install deps
-        run: yarn install
+        uses: threeal/yarn-install-action@v1.0.0
 
       - name: Check format
         run: |
