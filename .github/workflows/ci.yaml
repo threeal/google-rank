@@ -39,7 +39,7 @@ jobs:
         run: yarn install
 
       - name: Build dist
-        run: yarn nx build
+        run: yarn pack
 
       - name: Check diff
         run: git diff --exit-code HEAD
