@@ -3,7 +3,7 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "format", "lint", "sort"]
+        "cacheableOperations": ["build", "format", "lint"]
       }
     }
   },
@@ -20,7 +20,6 @@
       ]
     },
     "format": {
-      "dependsOn": ["sort"],
       "inputs": ["dependencies", "{projectRoot}/**/*", "{projectRoot}/**/.*"]
     },
     "lint": {
@@ -30,9 +29,6 @@
         "{projectRoot}/src/**/*",
         "{projectRoot}/.eslintrc.json"
       ]
-    },
-    "sort": {
-      "inputs": ["dependencies"]
     },
     "test": {
       "dependsOn": ["lint"]
