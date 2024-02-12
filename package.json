@@ -29,7 +29,7 @@
   "scripts": {
     "build": "tsc",
     "format": "prettier --write --cache .",
-    "lint": "eslint src",
+    "lint": "eslint --ignore-path .gitignore .",
     "prepack": "nx build",
     "sort": "sort-package-json",
     "test": "jest"
