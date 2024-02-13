@@ -7,7 +7,7 @@
   },
   "overrides": [
     {
-      "files": ["**/*.mts", "**/*.ts"],
+      "files": ["**/*.?([cm])ts"],
       "extends": ["plugin:@typescript-eslint/recommended"]
     },
     {
