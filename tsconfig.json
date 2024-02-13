@@ -1,4 +1,6 @@
 {
+  "include": ["src"],
+  "exclude": ["**/*.test.*"],
   "compilerOptions": {
     "exactOptionalPropertyTypes": true,
     "strict": true,
@@ -7,7 +9,5 @@
     "outDir": "dist",
     "target": "es2022",
     "skipLibCheck": true
-  },
-  "include": ["src"],
-  "exclude": ["**/*.test.*"]
+  }
 }
