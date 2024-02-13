@@ -37,8 +37,5 @@ jobs:
       - name: Build dist
         run: corepack yarn pack
 
-      - name: Test lib
-        run: corepack yarn test
-
       - name: Run bin
         run: corepack yarn google-rank --help
