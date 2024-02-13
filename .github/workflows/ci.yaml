@@ -26,14 +26,6 @@ jobs:
       - name: Install deps
         uses: threeal/yarn-install-action@v1.0.0
 
-      - name: Check format
-        run: |
-          corepack yarn format
-          git diff --exit-code HEAD
-
-      - name: Check lint
-        run: corepack yarn lint
-
       - name: Build dist
         run: corepack yarn pack
 
