@@ -1,19 +1,13 @@
-name: CI
+name: Build
 on:
   workflow_dispatch:
   pull_request:
   push:
     branches: [main]
-env:
-  NODE_OPTIONS: --experimental-vm-modules
 jobs:
-  test:
-    name: Test
-    runs-on: ${{ matrix.os }}-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [windows, ubuntu, macos]
+  build-package:
+    name: Build Package
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1
@@ -23,11 +17,13 @@ jobs:
         with:
           node-version: latest
 
-      - name: Install deps
+      - name: Install Dependencies
         uses: threeal/yarn-install-action@v1.0.0
 
-      - name: Build dist
+      - name: Create Package
         run: corepack yarn pack
 
-      - name: Run bin
-        run: corepack yarn google-rank --help
+      - name: Upload Package as Artifact
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          path: package.tgz
