@@ -45,5 +45,3 @@ jobs:
 
       - name: Test Package
         run: corepack yarn test
-        env:
-          NODE_OPTIONS: --experimental-vm-modules
