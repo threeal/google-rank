@@ -8,10 +8,10 @@
       "statements": 100
     }
   },
-  "extensionsToTreatAsEsm": [".ts", ".mts"],
   "moduleNameMapper": {
     "^(\\.{1,2}/.*)\\.mjs$": "$1.mts"
   },
+  "preset": "ts-jest/presets/default-esm",
   "transform": {
     "^.+\\.m?ts$": ["ts-jest", { "useESM": true }]
   }
