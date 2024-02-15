@@ -1,16 +1,13 @@
 {
+  "include": ["src"],
+  "exclude": ["**/*.test.*"],
   "compilerOptions": {
+    "exactOptionalPropertyTypes": true,
     "strict": true,
-    "module": "Node16",
-    "moduleResolution": "Node16",
+    "module": "node16",
     "declaration": true,
     "outDir": "dist",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "lib": ["ES2022"],
-    "target": "ES2022",
+    "target": "es2022",
     "skipLibCheck": true
-  },
-  "include": ["src"],
-  "exclude": ["**/*.test.*"]
+  }
 }
