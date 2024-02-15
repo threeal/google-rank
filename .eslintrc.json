@@ -1,25 +1,10 @@
 {
   "root": true,
   "extends": ["eslint:recommended"],
-  "parserOptions": {
-    "ecmaVersion": 2022,
-    "sourceType": "module"
-  },
   "overrides": [
     {
-      "files": ["**/*.mts", "**/*.ts"],
-      "extends": ["plugin:@typescript-eslint/recommended"],
-      "parser": "@typescript-eslint/parser",
-      "parserOptions": {
-        "project": "tsconfig.eslint.json"
-      },
-      "plugins": ["@typescript-eslint"]
-    },
-    {
-      "files": ["**/*.test.*"],
-      "env": {
-        "jest": true
-      }
+      "files": ["**/*.?([cm])ts"],
+      "extends": ["plugin:@typescript-eslint/recommended"]
     },
     {
       "files": ["package.json"],
