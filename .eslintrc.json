@@ -5,13 +5,6 @@
     {
       "files": ["**/*.?([cm])ts"],
       "extends": ["plugin:@typescript-eslint/recommended"]
-    },
-    {
-      "files": ["package.json"],
-      "plugins": ["json-files"],
-      "rules": {
-        "json-files/sort-package-json": "error"
-      }
     }
   ]
 }
