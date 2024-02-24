@@ -14,5 +14,6 @@
   "preset": "ts-jest/presets/default-esm",
   "transform": {
     "^.+\\.m?ts$": ["ts-jest", { "useESM": true }]
-  }
+  },
+  "verbose": true
 }
