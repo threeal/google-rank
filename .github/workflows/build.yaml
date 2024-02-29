@@ -21,7 +21,7 @@ jobs:
         uses: threeal/setup-yarn-action@v2.0.0
 
       - name: Create Package
-        run: corepack yarn pack
+        run: yarn pack
 
       - name: Upload Package as Artifact
         uses: actions/upload-artifact@v4.3.1

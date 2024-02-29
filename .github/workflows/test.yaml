@@ -22,11 +22,11 @@ jobs:
 
       - name: Check Format
         run: |
-          corepack yarn format
+          yarn format
           git diff --exit-code HEAD
 
       - name: Check Lint
-        run: corepack yarn lint
+        run: yarn lint
 
   test-package:
     name: Test Package
@@ -44,4 +44,4 @@ jobs:
         uses: threeal/setup-yarn-action@v2.0.0
 
       - name: Test Package
-        run: corepack yarn test
+        run: yarn test
