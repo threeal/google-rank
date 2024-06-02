@@ -1,12 +1,12 @@
-name: Test
+name: Check
 on:
   workflow_dispatch:
   pull_request:
   push:
     branches: [main]
 jobs:
-  test-package:
-    name: Test Package
+  check-package:
+    name: Check Package
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,5 +22,10 @@ jobs:
         with:
           version: stable
 
-      - name: Test Package
-        run: yarn test
+      - name: Check Format
+        run: |
+          yarn format
+          git diff --exit-code HEAD
+
+      - name: Check Lint
+        run: yarn lint
