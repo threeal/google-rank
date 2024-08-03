@@ -3,8 +3,8 @@
 import chalk from "chalk";
 import ora from "ora";
 
-import { ArgumentsParser, formatKeywordRank } from "./internal/index.mjs";
-import { getWebsiteRank, WebsiteRank } from "./rank.mjs";
+import { ArgumentsParser, formatKeywordRank } from "./internal/index.js";
+import { getWebsiteRank, WebsiteRank } from "./rank.js";
 
 type RankPromise = Promise<WebsiteRank | undefined>;
 
