@@ -1,6 +1,6 @@
 import { expect } from "@jest/globals";
 import chalk from "chalk";
-import { formatKeywordRank } from "./format.mjs";
+import { formatKeywordRank } from "./format.js";
 
 describe("format the rank of a keyword as a string", () => {
   it("should format undefined rank correctly", () => {

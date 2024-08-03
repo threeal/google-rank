@@ -2694,7 +2694,7 @@ __metadata:
     typescript: "npm:^5.5.4"
     typescript-eslint: "npm:^7.17.0"
   bin:
-    google-rank: dist/bin.mjs
+    google-rank: dist/bin.js
   languageName: unknown
   linkType: soft
 
