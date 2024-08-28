@@ -9,7 +9,7 @@ jobs:
     name: Build Package
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Project
         uses: actions/checkout@v4.1.7
 
       - name: Setup Node.js
@@ -22,10 +22,11 @@ jobs:
         with:
           version: stable
 
-      - name: Create Package
+      - name: Build Package
         run: yarn pack
 
-      - name: Upload Package as Artifact
+      - name: Upload Package
         uses: actions/upload-artifact@v4.3.6
         with:
+          name: package
           path: package.tgz
