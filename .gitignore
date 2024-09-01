@@ -1,6 +1,7 @@
 .*
 !.env.yarn
 !.git*
+!.nvmrc
 
 dist/
 node_modules/
