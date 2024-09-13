@@ -2668,7 +2668,7 @@ __metadata:
     chalk: "npm:^5.3.0"
     commander: "npm:^12.1.0"
     eslint: "npm:^9.10.0"
-    google-sr: "npm:^3.3.1"
+    google-sr: "npm:^3.3.2"
     jest: "npm:^29.7.0"
     ora: "npm:^8.1.0"
     prettier: "npm:^3.3.3"
@@ -2680,23 +2680,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"google-sr-selectors@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "google-sr-selectors@npm:0.0.2"
-  checksum: 10c0/1b7423c2d4d48066f6759f0bb81cba837b2a926516611238635b28fc7e4bd20e012ed4c0fde82bc3e53e20b26c577ece4a56905e2ba11b1af22d6c2bdb085852
+"google-sr-selectors@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "google-sr-selectors@npm:0.0.3"
+  checksum: 10c0/6cbc94c1170ee63601d9d331f9a659e98ffa9b2cf142120d95bdf04ce600ba15031b6494643c763ad128607f7a09094595e5352fbf015531b43ea4cd24de0afe
   languageName: node
   linkType: hard
 
-"google-sr@npm:^3.3.1":
-  version: 3.3.1
-  resolution: "google-sr@npm:3.3.1"
+"google-sr@npm:^3.3.2":
+  version: 3.3.2
+  resolution: "google-sr@npm:3.3.2"
   dependencies:
     axios: "npm:^1.4.0"
     cheerio: "npm:1.0.0-rc.12"
     deepmerge-ts: "npm:^5.1.0"
-    google-sr-selectors: "npm:^0.0.2"
+    google-sr-selectors: "npm:^0.0.3"
     tslib: "npm:^2.6.1"
-  checksum: 10c0/ab4f1734ada4e0fe2dc8a0270beb6f521f08fe09efa417fd599a2ca34edebe90797998f7f53ab7046dbf742058fd827738a5973a8afd037e2cd3197aa8f36451
+  checksum: 10c0/2406307c0ddc11fc524fb0d317cd14fa04a168bdd0e08ebef5f0c8efd199550430946a6978b5bc33fd6b370dd01992c39314f1f734560cce0646c8bbf8eb85fa
   languageName: node
   linkType: hard
 
