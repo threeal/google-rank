@@ -1,4 +1,4 @@
-import { SearchResultNode, searchWithPages } from "google-sr";
+import { searchWithPages } from "google-sr";
 
 /**
  * Represents the ranking of a website in Google Search.
@@ -30,8 +30,7 @@ export async function getWebsiteRank(
   for (let page = 0; page < res.length; ++page) {
     const websites: string[] = [];
     let prevWebsite = "";
-    for (let result of res[page]) {
-      result = result as SearchResultNode;
+    for (const result of res[page]) {
       if (result.link == null) continue;
       const website = new URL(result.link).hostname;
       if (website !== prevWebsite) websites.push(website);

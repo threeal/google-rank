@@ -1952,13 +1952,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge-ts@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "deepmerge-ts@npm:5.1.0"
-  checksum: 10c0/28f810e6f3c638020922c3abfb4f20bc8fff00262dbc5a1f5283ecae0b8ffd3b3b95aaca3c8992d8680eb5754c11d87edff1915235e145c5afdc53102665418f
-  languageName: node
-  linkType: hard
-
 "deepmerge@npm:^4.2.2":
   version: 4.3.1
   resolution: "deepmerge@npm:4.3.1"
@@ -2668,7 +2661,7 @@ __metadata:
     chalk: "npm:^5.3.0"
     commander: "npm:^12.1.0"
     eslint: "npm:^9.10.0"
-    google-sr: "npm:^3.3.2"
+    google-sr: "npm:^4.0.0"
     jest: "npm:^29.7.0"
     ora: "npm:^8.1.0"
     prettier: "npm:^3.3.3"
@@ -2680,23 +2673,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"google-sr-selectors@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "google-sr-selectors@npm:0.0.3"
-  checksum: 10c0/6cbc94c1170ee63601d9d331f9a659e98ffa9b2cf142120d95bdf04ce600ba15031b6494643c763ad128607f7a09094595e5352fbf015531b43ea4cd24de0afe
+"google-sr-selectors@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "google-sr-selectors@npm:1.0.0"
+  checksum: 10c0/9011b0410702978e0a8aa7caf85ddda3da122693506a5bf8c7cf4c72448d7b2d9a2fc6d350d3b3b650063ce973769a24e9c1b5b7ae38bc64aa60c8219fa77b8f
   languageName: node
   linkType: hard
 
-"google-sr@npm:^3.3.2":
-  version: 3.3.2
-  resolution: "google-sr@npm:3.3.2"
+"google-sr@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "google-sr@npm:4.0.0"
   dependencies:
     axios: "npm:^1.4.0"
     cheerio: "npm:1.0.0-rc.12"
-    deepmerge-ts: "npm:^5.1.0"
-    google-sr-selectors: "npm:^0.0.3"
-    tslib: "npm:^2.6.1"
-  checksum: 10c0/2406307c0ddc11fc524fb0d317cd14fa04a168bdd0e08ebef5f0c8efd199550430946a6978b5bc33fd6b370dd01992c39314f1f734560cce0646c8bbf8eb85fa
+    google-sr-selectors: "npm:^1.0.0"
+    tslib: "npm:^2.6.3"
+  checksum: 10c0/a6693ad97abb71660cca25cf766a4fda000146cf505f16c31630a5e6cf98be7257e2beead450faa1fc9e8ba3091290936c654446b52f1a905cf64af799d2b21d
   languageName: node
   linkType: hard
 
@@ -4881,10 +4873,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.6.1":
-  version: 2.6.2
-  resolution: "tslib@npm:2.6.2"
-  checksum: 10c0/e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb
+"tslib@npm:^2.6.3":
+  version: 2.7.0
+  resolution: "tslib@npm:2.7.0"
+  checksum: 10c0/469e1d5bf1af585742128827000711efa61010b699cb040ab1800bcd3ccdd37f63ec30642c9e07c4439c1db6e46345582614275daca3e0f4abae29b0083f04a6
   languageName: node
   linkType: hard
 
