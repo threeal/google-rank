@@ -2713,7 +2713,7 @@ __metadata:
     chalk: "npm:^5.3.0"
     commander: "npm:^12.1.0"
     eslint: "npm:^9.17.0"
-    google-sr: "npm:^4.0.0"
+    google-sr: "npm:^4.1.0"
     jest: "npm:^29.7.0"
     ora: "npm:^8.1.1"
     prettier: "npm:^3.4.2"
@@ -2725,22 +2725,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"google-sr-selectors@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "google-sr-selectors@npm:1.0.0"
-  checksum: 10c0/9011b0410702978e0a8aa7caf85ddda3da122693506a5bf8c7cf4c72448d7b2d9a2fc6d350d3b3b650063ce973769a24e9c1b5b7ae38bc64aa60c8219fa77b8f
+"google-sr-selectors@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "google-sr-selectors@npm:1.1.0"
+  checksum: 10c0/643422f787eef4d34edcc7bab4eca352d2aa7031846517ffda2e80b287fe3dc161ee4876f3f967453ac1f964822bfb990010c80feea68d5efe09228f5804e3d2
   languageName: node
   linkType: hard
 
-"google-sr@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "google-sr@npm:4.0.0"
+"google-sr@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "google-sr@npm:4.1.0"
   dependencies:
     axios: "npm:^1.4.0"
     cheerio: "npm:1.0.0-rc.12"
-    google-sr-selectors: "npm:^1.0.0"
-    tslib: "npm:^2.6.3"
-  checksum: 10c0/a6693ad97abb71660cca25cf766a4fda000146cf505f16c31630a5e6cf98be7257e2beead450faa1fc9e8ba3091290936c654446b52f1a905cf64af799d2b21d
+    google-sr-selectors: "npm:^1.1.0"
+  checksum: 10c0/525796cef1fa6ecc39358323a3861346d0028643344d4127a99dc4e1b12592c2198a2f87c3d406fafa020a12538728a5527cbfa18319515fa76bbd8f76ebc66a
   languageName: node
   linkType: hard
 
@@ -4908,13 +4907,6 @@ __metadata:
   bin:
     ts-jest: cli.js
   checksum: 10c0/acb62d168faec073e64b20873b583974ba8acecdb94681164eb346cef82ade8fb481c5b979363e01a97ce4dd1e793baf64d9efd90720bc941ad7fc1c3d6f3f68
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.6.3":
-  version: 2.7.0
-  resolution: "tslib@npm:2.7.0"
-  checksum: 10c0/469e1d5bf1af585742128827000711efa61010b699cb040ab1800bcd3ccdd37f63ec30642c9e07c4439c1db6e46345582614275daca3e0f4abae29b0083f04a6
   languageName: node
   linkType: hard
 
