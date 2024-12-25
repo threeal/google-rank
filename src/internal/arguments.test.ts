@@ -1,7 +1,7 @@
-import { expect, jest } from "@jest/globals";
-import { Readable } from "stream";
+import { Readable } from "node:stream";
+import { describe, expect, it, vi } from "vitest";
 
-jest.unstable_mockModule("fs", () => ({
+vi.mock("fs", () => ({
   createReadStream: () =>
     Readable.from(["googlethis\n\n\ngooglethat\n", "googlethis github"]),
 }));

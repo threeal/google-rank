@@ -1,7 +1,7 @@
-import { expect, jest } from "@jest/globals";
+import { describe, expect, it, vi } from "vitest";
 
-jest.unstable_mockModule("google-sr", () => ({
-  ...jest.requireActual<object>("google-sr"),
+vi.mock("google-sr", (original) => ({
+  ...original,
   searchWithPages: async ({
     query,
     pages,
