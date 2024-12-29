@@ -8,7 +8,6 @@
     "moduleResolution": "node16",
     "declaration": true,
     "outDir": "dist",
-    "esModuleInterop": true,
     "target": "es2022",
     "skipLibCheck": true
   }
