@@ -1,5 +1,5 @@
-import { expect } from "@jest/globals";
 import chalk from "chalk";
+import { describe, expect, it } from "vitest";
 import { formatKeywordRank } from "./format.js";
 
 describe("format the rank of a keyword as a string", () => {
