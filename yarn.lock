@@ -1967,7 +1967,7 @@ __metadata:
     chalk: "npm:^5.4.1"
     commander: "npm:^13.1.0"
     eslint: "npm:^9.19.0"
-    google-sr: "npm:^4.1.0"
+    google-sr: "npm:^5.0.0"
     ora: "npm:^8.1.1"
     prettier: "npm:^3.4.2"
     typescript: "npm:^5.7.3"
@@ -1978,21 +1978,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"google-sr-selectors@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "google-sr-selectors@npm:1.1.0"
-  checksum: 10c0/643422f787eef4d34edcc7bab4eca352d2aa7031846517ffda2e80b287fe3dc161ee4876f3f967453ac1f964822bfb990010c80feea68d5efe09228f5804e3d2
+"google-sr-selectors@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "google-sr-selectors@npm:2.0.0"
+  checksum: 10c0/4812423d0fe9edb013c5ffe3495ee2061915ec93f4de4bb3b4edbdedee96c1634537e1828864c07bc298fdea45bd0aff3061f99f272afd584802083abe446195
   languageName: node
   linkType: hard
 
-"google-sr@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "google-sr@npm:4.1.0"
+"google-sr@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "google-sr@npm:5.0.0"
   dependencies:
     axios: "npm:^1.4.0"
     cheerio: "npm:1.0.0-rc.12"
-    google-sr-selectors: "npm:^1.1.0"
-  checksum: 10c0/525796cef1fa6ecc39358323a3861346d0028643344d4127a99dc4e1b12592c2198a2f87c3d406fafa020a12538728a5527cbfa18319515fa76bbd8f76ebc66a
+    google-sr-selectors: "npm:^2.0.0"
+  checksum: 10c0/768282519b729caa3923bbf6478ef8086dcc269e7a89d7dad126db32fb5b7df8f95f4e380c79508145c479ebd0013729083ca9c9dcdec36c5b61d7c2dad02671
   languageName: node
   linkType: hard
 
