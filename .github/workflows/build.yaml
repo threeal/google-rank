@@ -5,8 +5,8 @@ on:
   push:
     branches: [main]
 jobs:
-  build-package:
-    name: Build Package
+  build-library:
+    name: Build Library
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout Project
@@ -18,7 +18,18 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Build Package
+      - name: Check Formatting
+        run: |
+          pnpm format
+          git diff --exit-code HEAD
+
+      - name: Check Lint
+        run: pnpm lint
+
+      - name: Test Libarry
+        run: pnpm test
+
+      - name: Package Libarry
         run: pnpm pack --out package.tgz
 
       - name: Upload Package
