@@ -1,14 +1,9 @@
 {
+  "extends": "@tsconfig/node23",
   "include": ["src"],
   "exclude": ["**/*.test.*"],
   "compilerOptions": {
-    "exactOptionalPropertyTypes": true,
-    "strict": true,
-    "module": "node16",
-    "moduleResolution": "node16",
     "declaration": true,
-    "outDir": "dist",
-    "target": "es2022",
-    "skipLibCheck": true
+    "outDir": "dist"
   }
 }
