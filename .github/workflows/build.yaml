@@ -24,6 +24,9 @@ jobs:
       - name: Check Lint
         run: pnpm eslint
 
+      - name: Check Types
+        run: pnpm tsc --noEmit
+
       - name: Test Libarry
         run: pnpm test
 
