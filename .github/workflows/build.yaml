@@ -31,10 +31,4 @@ jobs:
         run: pnpm test
 
       - name: Package Libarry
-        run: pnpm pack --out package.tgz
-
-      - name: Upload Package
-        uses: actions/upload-artifact@v4.6.2
-        with:
-          name: package
-          path: package.tgz
+        run: pnpm pack

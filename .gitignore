@@ -6,4 +6,4 @@
 dist/
 node_modules/
 
-package.tgz
+*.tgz
