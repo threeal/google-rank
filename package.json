@@ -28,7 +28,7 @@
   ],
   "scripts": {
     "prepack": "tsc",
-    "test": "vitest"
+    "test": "vitest run"
   },
   "dependencies": {
     "chalk": "^5.4.1",
