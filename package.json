@@ -28,6 +28,7 @@
   ],
   "scripts": {
     "prepack": "tsc",
+    "start": "vite-node src/bin.ts",
     "test": "vitest run"
   },
   "dependencies": {
@@ -46,6 +47,7 @@
     "prettier": "^3.5.3",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.27.0",
+    "vite-node": "^3.0.9",
     "vitest": "^3.0.5"
   },
   "pnpm": {
