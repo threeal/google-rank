@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",
-    "@tsconfig/node23": "^23.0.0",
+    "@tsconfig/node23": "^23.0.1",
     "@types/node": "^22.13.10",
     "@vitest/coverage-v8": "^3.0.5",
     "eslint": "^9.23.0",
