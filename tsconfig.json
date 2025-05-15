@@ -1,5 +1,5 @@
 {
-  "extends": "@tsconfig/node23",
+  "extends": "@tsconfig/node24",
   "include": ["src"],
   "exclude": ["**/*.test.*"],
   "compilerOptions": {
