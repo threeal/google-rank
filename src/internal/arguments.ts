@@ -44,7 +44,9 @@ export class ArgumentsParser {
   async parse(argv?: readonly string[]): Promise<Arguments> {
     this.#program.parse(argv);
 
-    const opts = this.#program.opts();
+    const opts: { keywords?: string[]; file?: string; maxPage: string } =
+      this.#program.opts();
+
     const args: Arguments = {
       website: this.#program.args[0],
       keywords: opts.keywords ?? [],
