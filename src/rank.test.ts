@@ -1,14 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 
-vi.mock("google-sr", (original) => ({
-  ...original,
-  searchWithPages: async ({
-    query,
-    pages,
-  }: {
-    query: string;
-    pages: number;
-  }) => {
+vi.mock("google-sr", () => ({
+  searchWithPages: ({ query, pages }: { query: string; pages: number }) => {
     if (query !== "google") return [];
     const websitesPages = [
       [
