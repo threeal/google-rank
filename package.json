@@ -28,7 +28,7 @@
   ],
   "scripts": {
     "prepack": "tsc -p tsconfig.build.json",
-    "start": "vite-node src/bin.ts",
+    "start": "jiti src/bin.ts",
     "test": "vitest run"
   },
   "dependencies": {
@@ -48,7 +48,6 @@
     "prettier": "^3.5.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.34.1",
-    "vite-node": "^3.2.3",
     "vitest": "^3.1.4"
   }
 }
