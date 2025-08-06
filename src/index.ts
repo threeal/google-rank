@@ -1,1 +1,1 @@
-export { getWebsiteRank, WebsiteRank } from "./rank.js";
+export { WebsiteRank, getWebsiteRank } from "./rank.js";
