@@ -34,7 +34,7 @@
   "dependencies": {
     "chalk": "^5.4.1",
     "commander": "^14.0.0",
-    "google-sr": "^5.0.0",
+    "google-sr": "^6.0.0",
     "ora": "^8.2.0"
   },
   "devDependencies": {
