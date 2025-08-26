@@ -22,8 +22,8 @@ importers:
         version: 8.2.0
     devDependencies:
       '@eslint/js':
-        specifier: ^9.32.0
-        version: 9.32.0
+        specifier: ^9.33.0
+        version: 9.33.0
       '@tsconfig/node24':
         specifier: ^24.0.1
         version: 24.0.1
