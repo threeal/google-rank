@@ -46,7 +46,7 @@
     "jiti": "^2.6.1",
     "lefthook": "^1.13.6",
     "prettier": "^3.6.2",
-    "prettier-plugin-organize-imports": "^4.2.0",
+    "prettier-plugin-organize-imports": "^4.3.0",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.45.0",
     "vitest": "^3.1.4"
