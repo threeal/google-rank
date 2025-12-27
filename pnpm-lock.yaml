@@ -810,10 +810,12 @@ packages:
   google-sr-selectors@3.0.0:
     resolution: {integrity: sha512-8duGEpfQ9O93YYRZvfWXJYyGhQ5/Zf3+Ejb100X4JD6RZr/YQcI+YANH+Ppuk5+ZiPZfqwLyHtBU1aiLgoqqgQ==}
     engines: {node: '>=20.0.0', pnpm: '>=10.13.1'}
+    deprecated: google-sr-selectors has been deprecated, see https://github.com/typicalninja/google-sr/issues/103
 
   google-sr@6.0.0:
     resolution: {integrity: sha512-C2Oo36ycwCuKAMCQB/Gij09UlP/nuf4Tu9+gCcW6/ILuj6BSQI9WcEA23CgPcTr3IAUUbEj1KtzKri/ocLOm1Q==}
     engines: {node: '>=20.0.0', pnpm: '>=10.13.1'}
+    deprecated: google-sr has been deprecated, see https://github.com/typicalninja/google-sr/issues/103
 
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
