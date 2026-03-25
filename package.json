@@ -38,7 +38,7 @@
     "ora": "^9.3.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.4",
+    "@eslint/js": "^10.0.1",
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^25.5.0",
     "@vitest/coverage-v8": "^4.0.15",
