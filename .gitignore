@@ -1,6 +1,5 @@
 .*
 !.git*
-!.npmrc
 !.prettier*
 
 dist/
